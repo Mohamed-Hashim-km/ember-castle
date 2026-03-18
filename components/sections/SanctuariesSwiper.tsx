@@ -30,7 +30,7 @@ export const CustomScrollbar = ({
   const thumbWidthPercent = totalSlides > 0 ? 100 / totalSlides : 100;
 
   return (
-    <div className="flex justify-center w-full max-w-[300px] mx-auto mt-10 md:mt-12">
+    <div className="flex justify-center w-full max-w-[300px] mx-auto mt-10 md:mt-12 pb-8">
       <div
         className="relative w-full h-[4px] shrink-0 overflow-hidden cursor-pointer rounded-full"
         style={{ backgroundColor: trackColor }}
@@ -95,7 +95,7 @@ export const SanctuariesSwiper = () => {
   const scrollbarProgress = rooms.length > 1 ? activeIndex / (rooms.length - 1) : 0;
 
   return (
-    <section className="pt-14 md:py-24 w-full relative overflow-hidden md:overflow-visible">
+    <section className=" md:py-24 w-full relative overflow-hidden md:overflow-visible">
       <div className="container mx-auto px-4 md:px-12 lg:px-28">
         <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-8 md:mb-14 text-primary leading-tight">
           The Sanctuaries
@@ -104,25 +104,25 @@ export const SanctuariesSwiper = () => {
         <div className="w-full">
           <Swiper
             modules={[Navigation,Autoplay]}
-            spaceBetween={20}
-            slidesPerView={1}
+            spaceBetween={16}
+            slidesPerView={1.2}
+            centeredSlides={true}
+            loop={false}
             autoplay={{
               delay: 2500,
               disableOnInteraction: false,
             }}
-            loop={true} // Enabled looping
             onBeforeInit={(swiper) => {
               swiperRef.current = swiper;
             }}
             onSlideChange={(swiper) => {
-              // Track realIndex instead of progress for loop stability
               setActiveIndex(swiper.realIndex);
             }}
             breakpoints={{
-              640: { slidesPerView: 2, spaceBetween: 30 },
-              1024: { slidesPerView: 3, spaceBetween: 50 },
+              640: { slidesPerView: 2, spaceBetween: 30, loop: true, centeredSlides: false },
+              1024: { slidesPerView: 3, spaceBetween: 50, loop: true, centeredSlides: false },
             }}
-            className="w-full"
+            className="pb-4! md:pb-0!"
           >
             {rooms.map((room, index) => (
               <SwiperSlide key={index} className="h-auto">
@@ -157,34 +157,19 @@ export const SanctuariesSwiper = () => {
             ))}
           </Swiper>
 
-          {/* Reusable Component implementation */}
-          <CustomScrollbar 
-            progress={scrollbarProgress} 
-            totalSlides={rooms.length} 
-            onSeek={(targetIndex) => {
-              // When loop is true, we must use slideToLoop instead of slideTo
-              swiperRef.current?.slideToLoop(targetIndex);
-            }} 
-          />
+          {/* Mobile-only scrollbar */}
+          <div className="md:hidden">
+            <CustomScrollbar 
+              progress={scrollbarProgress} 
+              totalSlides={rooms.length} 
+              onSeek={(targetIndex) => {
+                swiperRef.current?.slideToLoop(targetIndex);
+              }} 
+            />
+          </div>
         </div>
         
-        {/* Mobile Navigation */}
-        <div className="flex justify-center gap-6 mt-10 md:hidden">
-          <button 
-            className="w-12 h-12 flex items-center justify-center rounded-full border"
-            onClick={() => swiperRef.current?.slidePrev()}
-            aria-label="Previous slide"
-          >
-            <LeftArrow />
-          </button>
-          <button 
-            className="w-12 h-12 flex items-center justify-center rounded-full border"
-            onClick={() => swiperRef.current?.slideNext()}
-            aria-label="Next slide"
-          >
-            <RightArrow />
-          </button>
-        </div>
+
       </div>
       
       {/* Custom Navigation Buttons (Desktop) */}

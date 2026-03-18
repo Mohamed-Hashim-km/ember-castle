@@ -1,14 +1,14 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay, Scrollbar } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import Image from "next/image";
+import { CustomScrollbar } from "./SanctuariesSwiper";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/scrollbar";
 
 // Hardcoded Dummy Data
 const dummyItems = [
@@ -42,10 +42,10 @@ const dummyItems = [
 export const ContentCarousel = () => {
   const [prevEl, setPrevEl] = useState(null);
   const [nextEl, setNextEl] = useState(null);
+  const swiperRef = useRef<any>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  // Hardcoded Title & Description
-  const title = "Explore Our Spaces";
-  const description = "Discover the perfect blend of luxury, comfort, and tranquility tailored for your ultimate getaway.";
+  const scrollbarProgress = dummyItems.length > 1 ? activeIndex / (dummyItems.length - 1) : 0;
 
   return (
     <section className="pt-12 pb-2 md:py-16 lg:py-20  bg-[#FAF5EB] overflow-hidden">
@@ -54,14 +54,13 @@ export const ContentCarousel = () => {
       <div className="container mx-auto md:px-4">
         <div className="text-center mb-8 md:mb-16">
             <h2 className="text-4xl md:text-5xl lg:text-6xl text-primary leading-tight">Indulge in Distinctive <br  className="hidden md:block"/> Experiences</h2>
-          {/* {description && <div className="max-w-lg md:max-w-sm text-secondary text-sm md:text-lg leading-relaxed ">{description}</div>} */}
         </div>
       </div>
 
       {/* --- Swiper & Buttons Wrapper --- */}
       <div className="container mx-auto md:px-4 relative group/slider">
         <Swiper
-          modules={[Navigation, Autoplay, Scrollbar]}
+          modules={[Navigation, Autoplay]}
           spaceBetween={16}
           slidesPerView={1.2}
           loop={false}
@@ -69,13 +68,14 @@ export const ContentCarousel = () => {
             prevEl,
             nextEl,
           }}
-          scrollbar={{
-            draggable: true,
-            hide: false,
-            el: ".swiper-scrollbar",
+          onBeforeInit={(swiper) => {
+            swiperRef.current = swiper;
+          }}
+          onSlideChange={(swiper) => {
+            setActiveIndex(swiper.realIndex);
           }}
           autoplay={{ delay: 5000, disableOnInteraction: false }}
-          className="pb-12! md:pb-0!"
+          className="pb-4! md:pb-0!"
           centeredSlides={true}
           breakpoints={{
             640: {
@@ -101,7 +101,7 @@ export const ContentCarousel = () => {
           {dummyItems.map((item, index) => (
             <SwiperSlide key={index} className="h-auto">
               <div className="block h-full group cursor-pointer">
-                {/* Image Container - CHANGED aspect-3/4 TO aspect-[4/3] */}
+                {/* Image Container */}
                 <div className="relative overflow-hidden mb-4 md:mb-6 aspect-[3/3] w-full">
                   <Image
                     src={item.image}
@@ -120,14 +120,20 @@ export const ContentCarousel = () => {
               </div>
             </SwiperSlide>
           ))}
-          <div className="swiper-scrollbar mx-auto! w-[70%]! static! h-1! mt-12! bg-gray-200! md:hidden!">
-            <div className="swiper-scrollbar-drag bg-primary!"></div>
-          </div>
         </Swiper>
 
-        {/* --- Navigation Buttons --- */}
-        
-        {/* Previous Button - Adjusted top-[35%] to top-[40%] to match new image height */}
+        {/* Mobile-only CustomScrollbar */}
+        <div className="md:hidden pb-4">
+          <CustomScrollbar
+            progress={scrollbarProgress}
+            totalSlides={dummyItems.length}
+            onSeek={(targetIndex) => {
+              swiperRef.current?.slideTo(targetIndex);
+            }}
+          />
+        </div>
+
+        {/* --- Navigation Buttons (desktop only) --- */}
         <button
           ref={(node) => setPrevEl(node as any)}
           className="hidden md:flex absolute top-[40%] left-0 md:left-4 z-20 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white border border-gray-100 items-center justify-center transition-all duration-300 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
@@ -138,7 +144,6 @@ export const ContentCarousel = () => {
           </svg>
         </button>
 
-        {/* Next Button - Adjusted top-[35%] to top-[40%] to match new image height */}
         <button
           ref={(node) => setNextEl(node as any)}
           className="hidden md:flex absolute top-[40%] right-0 md:right-4 z-20 translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white border border-gray-100 items-center justify-center transition-all duration-300 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"

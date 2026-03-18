@@ -6,7 +6,7 @@ import { StarRating } from "../ui/StarRating";
 
 const RatingFeatureSection = () => {
   return (
-    <section className="bg-white pt-10 pb-16 md:py-24 lg:pb-28 lg:pt-10 w-full">
+    <section className="bg-white pt- pb-16 md:py-24 lg:pb-28 lg:pt-10 w-full">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-stretch">
           

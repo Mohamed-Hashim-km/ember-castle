@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
+import { CustomScrollbar } from "./SanctuariesSwiper";
 
 // Import Swiper styles
 import "swiper/css";
@@ -16,7 +17,7 @@ const STATIC_DESCRIPTION = "Explore the hidden gems, serene beaches, and lush gr
 const DUMMY_POSTS = [
   {
     id: 1,
-    image: "/1.png", // Replace with your actual public image paths
+    image: "/1.png",
     category: "2 KM AWAY",
     title: "Rabindranath Tagore Beach",
     description: "A beautiful stretch of sand perfect for evening strolls.",
@@ -40,6 +41,10 @@ const DUMMY_POSTS = [
 const AboutLocation = () => {
   const [prevEl, setPrevEl] = useState<HTMLElement | null>(null);
   const [nextEl, setNextEl] = useState<HTMLElement | null>(null);
+  const swiperRef = useRef<any>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const scrollbarProgress = DUMMY_POSTS.length > 1 ? activeIndex / (DUMMY_POSTS.length - 1) : 0;
 
   return (
     <div className="pt-12 pb-5 md:pb-0 md:pt-32 bg-white">
@@ -50,7 +55,6 @@ const AboutLocation = () => {
             <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight  text-primary">
               {STATIC_TITLE}
             </h2>
-            {/* <p className="text-secondary">{STATIC_DESCRIPTION}</p> */}
           </div>
         </div>
 
@@ -58,20 +62,27 @@ const AboutLocation = () => {
         <div className="w-full relative group/slider">
           <Swiper
             modules={[Navigation, Autoplay]}
-            spaceBetween={24}
-            slidesPerView={1}
-            loop={true}
+            spaceBetween={16}
+            slidesPerView={1.2}
+            centeredSlides={true}
+            loop={false}
             navigation={{
               prevEl: prevEl,
               nextEl: nextEl,
             }}
+            onBeforeInit={(swiper) => {
+              swiperRef.current = swiper;
+            }}
+            onSlideChange={(swiper) => {
+              setActiveIndex(swiper.realIndex);
+            }}
             autoplay={{ delay: 3000, disableOnInteraction: false }}
             breakpoints={{
-              640: { slidesPerView: 1 },
-              768: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
+              640: { slidesPerView: 1, loop: true, spaceBetween: 24, centeredSlides: false },
+              768: { slidesPerView: 2, loop: true, spaceBetween: 24, centeredSlides: false },
+              1024: { slidesPerView: 3, loop: true, spaceBetween: 24, centeredSlides: false },
             }}
-            className="!pb-0"
+            className="pb-4! md:pb-0!"
           >
             {DUMMY_POSTS.map((item, index) => (
               <SwiperSlide key={item.id} className="h-auto">
@@ -109,10 +120,21 @@ const AboutLocation = () => {
             ))}
           </Swiper>
 
-          {/* Previous Button */}
+          {/* Mobile-only CustomScrollbar */}
+          <div className="md:hidden pb-4">
+            <CustomScrollbar
+              progress={scrollbarProgress}
+              totalSlides={DUMMY_POSTS.length}
+              onSeek={(targetIndex) => {
+                swiperRef.current?.slideTo(targetIndex);
+              }}
+            />
+          </div>
+
+          {/* Previous Button - desktop only */}
           <button
             ref={(node) => setPrevEl(node)}
-            className="absolute top-1/2 -left-4 md:-left-6 z-20 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-primary transition-all duration-300 hover:bg-primary hover:text-white disabled:opacity-50 disabled:cursor-not-allowed opacity-0 group-hover/slider:opacity-100"
+            className="hidden md:flex absolute top-1/2 -left-4 md:-left-6 z-20 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg items-center justify-center text-primary transition-all duration-300 hover:bg-primary hover:text-white disabled:opacity-50 disabled:cursor-not-allowed opacity-0 group-hover/slider:opacity-100"
             aria-label="Previous slide"
           >
             <svg
@@ -129,10 +151,10 @@ const AboutLocation = () => {
             </svg>
           </button>
 
-          {/* Next Button */}
+          {/* Next Button - desktop only */}
           <button
             ref={(node) => setNextEl(node)}
-            className="absolute top-1/2 -right-4 md:-right-6 z-20 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-primary transition-all duration-300 hover:bg-primary hover:text-white disabled:opacity-50 disabled:cursor-not-allowed opacity-0 group-hover/slider:opacity-100"
+            className="hidden md:flex absolute top-1/2 -right-4 md:-right-6 z-20 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg items-center justify-center text-primary transition-all duration-300 hover:bg-primary hover:text-white disabled:opacity-50 disabled:cursor-not-allowed opacity-0 group-hover/slider:opacity-100"
             aria-label="Next slide"
           >
             <svg

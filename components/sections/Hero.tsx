@@ -322,9 +322,9 @@ export const BookingBar = () => {
                 children,
               });
             }}
-            aria-label="Book your stay"
+            aria-label="Check Availability"
           >
-            Book Now
+            Check Availability
           </Button>
         </div>
 

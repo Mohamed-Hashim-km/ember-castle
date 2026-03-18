@@ -149,7 +149,7 @@ export const SanctuariesSwiper = () => {
                     </div>
                     
                     <div className="mt-auto items-start flex">
-                      <Button variant="tertiary">Learn More</Button>
+                      <Button variant="tertiary">Check Availability</Button>
                     </div>
                   </div>
                 </div>

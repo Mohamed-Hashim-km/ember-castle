@@ -4,36 +4,32 @@ import React, { useState } from "react";
 import { Dash, Plus02 } from "../utils/Icon";
 
 const faqData = [
-  {
-    id: 1,
-    question: "What kind of hotel is Hotel Éden?",
-    answer: "A designer boutique hotel in Karwar offering stays, dining, wellness, and event spaces.",
-  },
-  {
-    id: 2,
-    question: "Who is Hotel Éden ideal for?",
-    answer: "Perfect for families, couples, and business travellers.",
-  },
-  {
-    id: 3,
-    question: "What dining options are available?",
-    answer: "Three in-house restaurants: Tulip, Food & Forest and Oyster Bay.",
-  },
-  {
-    id: 4,
-    question: "Do you have spa and wellness facilities?",
-    answer: "Yes, we have The Golden Leaf Spa along with fitness and recreation facilities.",
-  },
-  {
-    id: 5,
-    question: "Can I host events at Hotel Éden?",
-    answer: "Yes, we offer banquet and conference spaces for events and celebrations.",
-  },
-  {
-    id: 6,
-    question: "Are the hotels affordable?",
-    answer: "Both properties offer a great balance of comfort, facilities, and value for money, ensuring a luxurious experience without compromise.",
-  },
+ {
+      id: 1,
+      question: "How far is Hotel Éden Ember Castle from Gokarna Main Beach?",
+      answer: "It’s approximately 2.6 km, making beach visits quick and easy.",
+    },
+    {
+      id: 2,
+      question: "Is parking available?",
+      answer: "Yes, the property offers free private parking on site.",
+    },
+    {
+      id: 3,
+      question: "Does the property have dining options?",
+      answer: "Yes, an on-site restaurant serves meals including buffet breakfast with local specialties. ",
+    },
+    {
+      id: 4,
+      question: "Are there activities onsite?",
+      answer:
+        "Guests can enjoy the pool, garden areas, spa facilities, and fitness centre, making this a great pick for both relaxation and adventure.",
+    },
+    {
+      id: 5,
+      question: "Do guests receive any complimentary benefits with their stay?",
+      answer: "Yes, guests are welcomed with a complimentary welcome drink and can enjoy free breakfast during their stay.",
+    },
 ];
 
 const Faq = () => {
@@ -44,10 +40,10 @@ const Faq = () => {
   };
 
   return (
-    <section className="md:py-28 bg-white">
+    <section className="md:py-28 pb-14 bg-white">
       <div className="container mx-auto px-4">
         {/* Added items-center here to vertically center the left and right columns */}
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+        <div className="flex flex-col lg:flex-row gap-4 lg:gap-16 items-center">
           {/* Left Side: Title and Description */}
           <div className="w-full lg:w-5/12">
             <div className="mb- lg:mb-0">

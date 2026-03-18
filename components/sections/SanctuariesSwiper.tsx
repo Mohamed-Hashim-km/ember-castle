@@ -95,7 +95,7 @@ export const SanctuariesSwiper = () => {
   const scrollbarProgress = rooms.length > 1 ? activeIndex / (rooms.length - 1) : 0;
 
   return (
-    <section className="py-16 md:py-24 w-full relative overflow-hidden md:overflow-visible">
+    <section className="pt-14 md:py-24 w-full relative overflow-hidden md:overflow-visible">
       <div className="container mx-auto px-4 md:px-12 lg:px-28">
         <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-8 md:mb-14 text-primary leading-tight">
           The Sanctuaries

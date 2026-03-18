@@ -6,9 +6,9 @@ import { StarRating } from "../ui/StarRating";
 
 const RatingFeatureSection = () => {
   return (
-    <section className="bg-white py-16 md:py-24 lg:pb-28 lg:pt-10 w-full">
+    <section className="bg-white pt-10 pb-16 md:py-24 lg:pb-28 lg:pt-10 w-full">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-stretch">
           
           {/* Content side */}
           <div className="flex flex-col justify-between py-6">
@@ -28,7 +28,7 @@ const RatingFeatureSection = () => {
             </div>
 
             {/* Rating block pushed towards the bottom */}
-            <div className="mt-16 lg:mt-auto pt-8">
+            <div className="md:mt-16 lg:mt-auto pt-8">
               <div className="flex flex-col items-start">
                 <span className="text-xl md:text-2xl font-medium tracking-wide text-[#001446]">
                   4.3 Stars

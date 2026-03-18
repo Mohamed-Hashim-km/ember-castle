@@ -39,12 +39,10 @@ const BookingModal = () => {
   const router = useRouter();
 
   // Hardcoded for Ember Castle
-  const locations = ["Ember Castle"];
   const roomOptions = ["Premium Room", "Dormitories", "Villas"];
-  const diningOptions = ["Tulip"]; // Adjust if Ember Castle has specific dining options
-  const reservationOptions = ["Room Booking", "Dining Reservation", "Spa", "Event Hosting"];
+  const diningOptions = ["Tulip"];
+  const reservationOptions = ["Room Booking", "Dining Reservation", "Spa"];
 
-  const [selectedLocation, setSelectedLocation] = useState(locations[0]);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -215,7 +213,6 @@ const BookingModal = () => {
       name,
       email,
       phone,
-      location: selectedLocation,
       reservationType,
       roomType,
       diningOption,
@@ -244,7 +241,6 @@ const BookingModal = () => {
         setName("");
         setEmail("");
         setPhone("");
-        setSelectedLocation(locations[0]);
         setReservationType("Room Booking");
         setRoomType(roomOptions[0]);
         setDiningOption(diningOptions[0]);
@@ -312,9 +308,6 @@ const BookingModal = () => {
                   error={errors.name}
                   required
                 />
-
-                {/* Location Select (Now statically set to Ember Castle options) */}
-                <Select label="LOCATION" options={locations} value={selectedLocation} onChange={(e) => setSelectedLocation(e.target.value)} />
 
                 {/* Phone */}
                 <div className="flex flex-col">

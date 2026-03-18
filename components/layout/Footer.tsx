@@ -382,29 +382,22 @@ export const Footer = () => {
             {/* --- RIGHT SECTION: LINKS & CONTACT --- */}
             <div className="flex flex-col md:flex-row gap-16  pt-2">
               {/* Navigation Column */}
-              <div>
-                <nav className="flex flex-col gap-4 text-base text-white">
-                  <Link href="/dining" className="hover:text-white transition-colors">
-                    Dining
-                  </Link>
-                  <Link href="/spa" className="hover:text-white transition-colors">
-                    Spa
-                  </Link>
-                  <Link href="/events" className="hover:text-white transition-colors">
-                    Events
-                  </Link>
-                  <Link href="/about" className="hover:text-white transition-colors">
-                    About
-                  </Link>
-                  <Link href="/contact" className="hover:text-white transition-colors">
-                    Contact
-                  </Link>
-                </nav>
-              </div>
+              
 
               {/* Get in Touch Column */}
               <div className="flex flex-col gap-8">
                 <h2 className="text-3xl md:text-3xl text-white ">Get in Touch</h2>
+
+                {/* -- NEW MAIL SECTION -- */}
+                <div className="flex flex-col gap-4">
+                  <div className="flex items-center gap-4">
+                    <MailIcon />
+                    <a href="mailto:contact@edenhotel.com" className="hover:underline">contact@edenhotel.com</a>
+                  </div>
+                  <div className="ml-9">
+                    <a href="mailto:website.feedback@edenhotel.com" className="hover:underline">website.feedback@edenhotel.com</a>
+                  </div>
+                </div>
 
                 {/* Social Icons */}
                 <div className="flex gap-4 mt-2">
@@ -512,8 +505,20 @@ export const Footer = () => {
           <div className="h-px bg-[#FAF5EB]/20 w-full my-4" />
 
           {/* Section 3: Get in Touch */}
-          <div className="flex flex-col gap-4 mb-8">
+          <div className="flex flex-col gap-4 mt-2">
             <h3 className="text-xl font-medium font-serif mb-2">Get in Touch</h3>
+
+            {/* -- NEW MAIL SECTION -- */}
+            <div className="flex flex-col gap-3">
+              <div className="flex items-center gap-4">
+                <MailIcon />
+                <a href="mailto:contact@edenhotel.com" className="hover:underline">contact@edenhotel.com</a>
+              </div>
+              <div className="ml-9">
+                <a href="mailto:website.feedback@edenhotel.com" className="hover:underline">website.feedback@edenhotel.com</a>
+              </div>
+            </div>
+
             <div className="flex gap-4">
               <Link
                 href="https://www.instagram.com/hoteleden7?igsh=OW54YTRjdm4zdjVo"
@@ -539,59 +544,14 @@ export const Footer = () => {
             </div>
           </div>
 
-          <div className="h-px bg-[#FAF5EB]/20 w-full mb-8" />
+          {/* <div className="h-px bg-[#FAF5EB]/20 w-full mb-8" /> */}
 
           {/* Navigation Grid */}
-          <div className="grid grid-cols-2 gap-y-4 text-[15px]">
-            {/* Left Column */}
-            <div className="flex flex-col gap-4">
-              <Link href="/dining" className="w-max hover:">
-                Dining
-              </Link>
-              <Link href="/spa" className="w-max hover:">
-                Spa
-              </Link>
-              <Link href="/events" className="w-max hover:">
-                Events
-              </Link>
-            </div>
-
-            {/* Right Column */}
-            <div className="flex flex-col gap-4">
-              <Link href="/about" className="w-max hover:">
-                About
-              </Link>
-              <Link href="/contact" className="w-max hover:">
-                Contact
-              </Link>
-
-              {/* Social Icons moved here to match bottom right layout */}
-            </div>
-          </div>
+       
         </div>
 
         {/* --- SECTION 2: DESTINATIONS ACCORDION --- */}
-        <div className="border-t border-[#FAF5EB]/20">
-          <button
-            onClick={() => setDestinationsOpen(!destinationsOpen)}
-            className="w-full flex justify-between items-center py-6 group outline-none"
-            aria-label={destinationsOpen ? "Collapse destinations" : "Expand destinations"}
-          >
-            <h4 className="text-2xl ">Destination</h4>
-            <span>{destinationsOpen ? <MinusIcon /> : <PlusIcon />}</span>
-          </button>
-
-          <div className={`overflow-hidden transition-all duration-300 ease-in-out ${destinationsOpen ? "max-h-40 pb-8" : "max-h-0"}`}>
-            <div className="flex md:flex-row flex-col items-center md:items-start pl-0 md:pl-10 gap-4 text-[15px]">
-              <Link href="/hotel-eden-karwar" className="w-max">
-                Karwar
-              </Link>
-              <Link href="/hotel-eden-ember-castle-gokarna" className="w-max">
-                Gokarna
-              </Link>
-            </div>
-          </div>
-        </div>
+      
 
         {/* --- SECTION 3: OUR BRANDS --- */}
         <div className="border-t border-[#FAF5EB]/20 py-10 hidden lg:flex flex-col lg:flex-row items-center">

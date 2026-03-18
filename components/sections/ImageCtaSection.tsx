@@ -65,7 +65,7 @@ Coastal Retreat
           <Image src={backgroundImage} alt={title} fill className="object-cover" priority />
         </div>
         <div className="px-6 py-12 flex flex-col items-start text-left">
-          <h2 className="text-3xl text-primary mb-8 leading-tight font-serif">{title}</h2>
+          <h2 className="text-3xl text-primary mb-8 leading-tight font-serif">Reserve Your Coastal Retreat</h2>
           
           <a onClick={handleButtonClick} className="cursor-pointer w-full">
             <Button aria-label={buttonText} variant="outline2" className="w-full">

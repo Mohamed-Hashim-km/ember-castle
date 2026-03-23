@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
@@ -43,7 +43,21 @@ const AboutLocation = () => {
   const [nextEl, setNextEl] = useState<HTMLElement | null>(null);
   const swiperRef = useRef<any>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  
+  // Track if we are on a desktop screen
+  const [isDesktop, setIsDesktop] = useState(false);
 
+  useEffect(() => {
+    const handleResize = () => setIsDesktop(window.innerWidth >= 1024);
+    handleResize(); // Check immediately on mount
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // ONLY duplicate the array if we are on mobile/tablet. On desktop, keep the original 3.
+  const displayPosts = isDesktop ? DUMMY_POSTS : [...DUMMY_POSTS, ...DUMMY_POSTS];
+
+  // Calculate progress purely based on the original 3 items
   const scrollbarProgress = DUMMY_POSTS.length > 1 ? activeIndex / (DUMMY_POSTS.length - 1) : 0;
 
   return (
@@ -61,11 +75,13 @@ const AboutLocation = () => {
         {/* Swiper Section Container */}
         <div className="w-full relative group/slider">
           <Swiper
+            // The key forces Swiper to completely re-render when switching between desktop/mobile modes
+            key={isDesktop ? "desktop-swiper" : "mobile-swiper"}
             modules={[Navigation, Autoplay]}
             spaceBetween={16}
             slidesPerView={1.2}
             centeredSlides={true}
-            loop={false}
+            loop={!isDesktop} // Turn loop OFF on desktop, ON for mobile
             navigation={{
               prevEl: prevEl,
               nextEl: nextEl,
@@ -74,18 +90,20 @@ const AboutLocation = () => {
               swiperRef.current = swiper;
             }}
             onSlideChange={(swiper) => {
-              setActiveIndex(swiper.realIndex);
+              // Modulo division ensures the index stays between 0 and 2
+              setActiveIndex(swiper.realIndex % DUMMY_POSTS.length);
             }}
             autoplay={{ delay: 3000, disableOnInteraction: false }}
             breakpoints={{
               640: { slidesPerView: 1, loop: true, spaceBetween: 24, centeredSlides: false },
               768: { slidesPerView: 2, loop: true, spaceBetween: 24, centeredSlides: false },
-              1024: { slidesPerView: 3, loop: true, spaceBetween: 24, centeredSlides: false },
+              1024: { slidesPerView: 3, loop: false, spaceBetween: 24, centeredSlides: false },
             }}
             className="pb-4! md:pb-0!"
           >
-            {DUMMY_POSTS.map((item, index) => (
-              <SwiperSlide key={item.id} className="h-auto">
+            {/* Map over our conditionally duplicated array */}
+            {displayPosts.map((item, index) => (
+              <SwiperSlide key={`${item.id}-${index}`} className="h-auto">
                 <div className="h-full">
                   <div className="block h-full">
                     <div className="group relative h-full min-h-[400px] overflow-hidden  p-8 flex flex-col justify-end items-center transition-all duration-500 ease-in-out cursor-pointer hover:z-10">
@@ -124,9 +142,9 @@ const AboutLocation = () => {
           <div className="md:hidden pb-4">
             <CustomScrollbar
               progress={scrollbarProgress}
-              totalSlides={DUMMY_POSTS.length}
+              totalSlides={DUMMY_POSTS.length} // Force the scrollbar to only see 3 slides
               onSeek={(targetIndex) => {
-                swiperRef.current?.slideTo(targetIndex);
+                swiperRef.current?.slideToLoop(targetIndex);
               }}
             />
           </div>

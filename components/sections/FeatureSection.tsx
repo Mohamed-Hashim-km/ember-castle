@@ -21,7 +21,7 @@ const FeatureSection = () => {
           {/* Beige Background Box 
              (This is absolutely positioned to the center, so it stays fixed in the middle) 
           */}
-          <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[90%] h-[550px] bg-[#E2BA86] z-0" />
+          <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[90%] h-[550px] bg-[#001446] z-0" />
 
           {/* Main Grid Content */}
           <div className="w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-0 items-center">
@@ -35,12 +35,13 @@ const FeatureSection = () => {
             </div>
 
             {/* Content Section */}
-            <div className="lg:col-span-5 md:bg-[#E5CAA4] lg:bg-transparent p-8 md:p-12 lg:pl-16 lg:pr-12 xl:pl-24">
+            <div className="lg:col-span-5 md:bg-[#001446] lg:bg-transparent p-8 md:p-12 lg:pl-16 lg:pr-12 xl:pl-24">
               <div className="max-w-xl text-center lg:text-left">
                 <h2 className="text-3xl md:text-4xl  text-primary lg:text-white mb-6">Explore Our Flavours</h2>
 
                 {/* Divider */}
                 <div className="w-40 h-[1.5px] mx-auto lg:mx-0 bg-white/80 hidden lg:block mb-8"></div>
+                <div className="w-44 h-[1.5px] mx-auto lg:mx-0 bg-secondary  lg:hidden mb-8"></div>
 
                 <p className="lg:text-white text-[#001446] text-lg leading-relaxed mb-10 font-light">
                   Elevate your evenings with exclusive dinner offerings, including curated set menus and dining credits redeemable across our
@@ -55,7 +56,7 @@ const FeatureSection = () => {
                 <button
                   onClick={handleButtonClick}
                   aria-label="Explore the Dining"
-                  className="hidden px-6 py-2 transition-all duration-300 font-medium bg-[#001446] text-[#E2BA86] disabled:bg-[#001446]/50   disabled:cursor-not-allowed cursor-pointer lg:block "
+                  className="hidden px-6 py-2 transition-all duration-300 font-medium bg-[#E2BA86] text-[#001446] disabled:bg-[#001446]/50   disabled:cursor-not-allowed cursor-pointer lg:block "
                 >
                   Book Now
                 </button>

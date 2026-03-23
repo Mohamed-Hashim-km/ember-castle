@@ -90,6 +90,10 @@ export const SanctuariesSwiper = () => {
     { title: "3-Bedroom\nFamily Villa", price: "1,265", image: "/1.png" }
   ];
 
+  // Duplicate the array to ensure Swiper has enough slides to loop smoothly
+  const displayRooms = [...rooms, ...rooms];
+
+  // Calculate progress purely based on the original 4 items
   const scrollbarProgress = rooms.length > 1 ? activeIndex / (rooms.length - 1) : 0;
 
   return (
@@ -105,7 +109,7 @@ export const SanctuariesSwiper = () => {
             spaceBetween={16}
             slidesPerView={1.2}
             centeredSlides={true}
-            loop={false}
+            loop={true}
             autoplay={{
               delay: 2500,
               disableOnInteraction: false,
@@ -114,7 +118,8 @@ export const SanctuariesSwiper = () => {
               swiperRef.current = swiper;
             }}
             onSlideChange={(swiper) => {
-              setActiveIndex(swiper.realIndex);
+              // Modulo division ensures the index stays between 0 and 3
+              setActiveIndex(swiper.realIndex % rooms.length);
             }}
             breakpoints={{
               640: { slidesPerView: 2, spaceBetween: 30, loop: true, centeredSlides: false },
@@ -122,7 +127,8 @@ export const SanctuariesSwiper = () => {
             }}
             className="pb-4! md:pb-0!"
           >
-            {rooms.map((room, index) => (
+            {/* Map over the duplicated displayRooms array */}
+            {displayRooms.map((room, index) => (
               <SwiperSlide key={index} className="h-auto">
                 <div className="flex flex-col h-full">
                   <div className="relative w-full aspect-4/5 lg:aspect-3/3 mb-6 overflow-hidden bg-gray-100">
@@ -159,7 +165,7 @@ export const SanctuariesSwiper = () => {
           <div className="md:hidden">
             <CustomScrollbar 
               progress={scrollbarProgress} 
-              totalSlides={rooms.length} 
+              totalSlides={rooms.length} // Force the scrollbar to only see 4 slides
               onSeek={(targetIndex) => {
                 swiperRef.current?.slideToLoop(targetIndex);
               }} 

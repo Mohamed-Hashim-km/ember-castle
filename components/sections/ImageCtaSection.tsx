@@ -68,7 +68,7 @@ Coastal Retreat
           <h2 className="text-3xl text-primary mb-8 leading-tight font-serif">Reserve Your Coastal Retreat</h2>
           
           <a onClick={handleButtonClick} className="cursor-pointer w-full">
-            <Button aria-label={buttonText} variant="outline2" className="w-full">
+            <Button aria-label={buttonText} variant="outline2" className="">
               {buttonText}
             </Button>
           </a>

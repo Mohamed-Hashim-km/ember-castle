@@ -63,7 +63,7 @@ export const ContentCarousel = () => {
           modules={[Navigation, Autoplay]}
           spaceBetween={16}
           slidesPerView={1.2}
-          loop={false}
+          loop={true}
           navigation={{
             prevEl,
             nextEl,

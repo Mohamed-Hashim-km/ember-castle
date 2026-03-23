@@ -49,139 +49,139 @@ const LogoIcon = () => (
       <path
         d="M59.3277 117.626C59.3277 117.626 59.3918 117.672 59.4284 117.69C68.4583 111.408 74.3744 100.949 74.3744 89.1077C74.3744 77.2664 68.4583 66.817 59.4284 60.5254C50.3894 66.8078 44.4824 77.2664 44.4824 89.1077C44.4824 100.903 50.3527 111.325 59.3277 117.617V117.626Z"
         stroke="#E2BA86"
-        stroke-width="2.13383"
+        strokeWidth="2.13383"
         strokeMiterlimit="10"
       />
       <path
         d="M69.2544 107.397C66.7268 103.285 63.3749 99.7313 59.4278 96.9839C55.4807 99.7313 52.1288 103.266 49.6104 107.369"
         stroke="#E2BA86"
-        stroke-width="2.13383"
+        strokeWidth="2.13383"
         strokeMiterlimit="10"
       />
-      <path d="M59.4287 60.5342V97.1848" stroke="#E2BA86" stroke-width="2.13383" strokeMiterlimit="10" />
+      <path d="M59.4287 60.5342V97.1848" stroke="#E2BA86" strokeWidth="2.13383" strokeMiterlimit="10" />
       <path
         d="M59.4285 98.8701C60.3085 98.8701 61.022 98.1567 61.022 97.2766C61.022 96.3965 60.3085 95.6831 59.4285 95.6831C58.5484 95.6831 57.835 96.3965 57.835 97.2766C57.835 98.1567 58.5484 98.8701 59.4285 98.8701Z"
         fill="#E2BA86"
         stroke="#E2BA86"
-        stroke-width="2.13383"
+        strokeWidth="2.13383"
         strokeMiterlimit="10"
       />
       <path
         d="M9.24173 30.2859C9.24173 30.2859 9.16847 30.3225 9.13184 30.3408C10.0568 41.303 16.1561 51.6608 26.4131 57.5769C36.661 63.493 48.6764 63.6029 58.6404 58.9232C57.7154 47.9609 51.6161 37.6032 41.3683 31.687C31.1478 25.7892 19.1874 25.661 9.25089 30.295L9.24173 30.2859Z"
         stroke="#E2BA86"
-        stroke-width="2.13383"
+        strokeWidth="2.13383"
         strokeMiterlimit="10"
       />
       <path
         d="M13.1436 43.9954C17.9699 43.8672 22.7137 42.7316 27.073 40.6894C26.67 35.8997 25.278 31.2291 22.9885 26.998"
         stroke="#E2BA86"
-        stroke-width="2.13383"
+        strokeWidth="2.13383"
         strokeMiterlimit="10"
       />
-      <path d="M58.6403 58.923L26.8984 40.5977" stroke="#E2BA86" stroke-width="2.13383" strokeMiterlimit="10" />
+      <path d="M58.6403 58.923L26.8984 40.5977" stroke="#E2BA86" strokeWidth="2.13383" strokeMiterlimit="10" />
       <path
         d="M26.825 42.1455C27.705 42.1455 28.4185 41.4321 28.4185 40.552C28.4185 39.6719 27.705 38.9585 26.825 38.9585C25.9449 38.9585 25.2314 39.6719 25.2314 40.552C25.2314 41.4321 25.9449 42.1455 26.825 42.1455Z"
         fill="#E2BA86"
         stroke="#E2BA86"
-        stroke-width="2.13383"
+        strokeWidth="2.13383"
         strokeMiterlimit="10"
       />
       <path
         d="M109.925 30.5788C109.925 30.5788 109.925 30.4964 109.934 30.4598C99.9795 25.78 87.9641 25.8899 77.7071 31.806C67.4592 37.7221 61.3507 48.0707 60.4258 59.0421C70.3806 63.7219 82.396 63.6211 92.653 57.6959C102.873 51.7981 108.964 41.5044 109.925 30.5788Z"
         stroke="#E2BA86"
-        stroke-width="2.13383"
+        strokeWidth="2.13383"
         strokeMiterlimit="10"
       />
       <path
         d="M96.1057 27.1079C93.8071 31.3481 92.4059 36.0279 92.0029 40.8267C96.353 42.869 101.088 44.0046 105.905 44.1328"
         stroke="#E2BA86"
-        stroke-width="2.13383"
+        strokeWidth="2.13383"
         strokeMiterlimit="10"
       />
-      <path d="M60.4346 59.0421L92.1765 40.7168" stroke="#E2BA86" stroke-width="2.13383" strokeMiterlimit="10" />
+      <path d="M60.4346 59.0421L92.1765 40.7168" stroke="#E2BA86" strokeWidth="2.13383" strokeMiterlimit="10" />
       <path
         d="M92.2498 42.2642C93.1298 42.2642 93.8433 41.5507 93.8433 40.6707C93.8433 39.7906 93.1298 39.0771 92.2498 39.0771C91.3697 39.0771 90.6562 39.7906 90.6562 40.6707C90.6562 41.5507 91.3697 42.2642 92.2498 42.2642Z"
         fill="#E2BA86"
         stroke="#E2BA86"
-        stroke-width="2.13383"
+        strokeWidth="2.13383"
         strokeMiterlimit="10"
       />
       <path
         d="M28.3633 59.0601C27.6673 59.3714 26.9804 59.7103 26.2936 60.0674C15.8625 65.5806 9.38775 75.6453 8.0232 86.5251C8.0232 86.5618 8.01404 86.6075 8.00488 86.6442C17.7857 91.6903 29.7919 92.0383 40.2596 86.4976C41.7982 85.6826 43.2543 84.7759 44.6189 83.7685"
         stroke="#E2BA86"
-        stroke-width="2.13383"
+        strokeWidth="2.13383"
         strokeMiterlimit="10"
       />
-      <path d="M58.5487 59.9209L26.1475 77.0465" stroke="#E2BA86" stroke-width="2.13383" strokeMiterlimit="10" />
+      <path d="M58.5487 59.9209L26.1475 77.0465" stroke="#E2BA86" strokeWidth="2.13383" strokeMiterlimit="10" />
       <path
         d="M26.074 78.686C26.954 78.686 27.6675 77.9726 27.6675 77.0925C27.6675 76.2125 26.954 75.499 26.074 75.499C25.1939 75.499 24.4805 76.2125 24.4805 77.0925C24.4805 77.9726 25.1939 78.686 26.074 78.686Z"
         fill="#E2BA86"
         stroke="#E2BA86"
-        stroke-width="2.13383"
+        strokeWidth="2.13383"
         strokeMiterlimit="10"
       />
       <path
         d="M75.4543 32.7583C75.5367 31.9981 75.5825 31.238 75.6191 30.4596C76.0587 18.6731 70.5822 8.03146 61.8454 1.41018C61.8179 1.3827 61.7813 1.36439 61.7538 1.33691C52.495 7.2805 46.1942 17.5101 45.7547 29.3423C45.6905 31.0823 45.7547 32.7949 45.9378 34.48"
         stroke="#E2BA86"
-        stroke-width="2.13383"
+        strokeWidth="2.13383"
         strokeMiterlimit="10"
       />
-      <path d="M59.6104 58.4649L60.9749 21.8418" stroke="#E2BA86" stroke-width="2.13383" strokeMiterlimit="10" />
+      <path d="M59.6104 58.4649L60.9749 21.8418" stroke="#E2BA86" strokeWidth="2.13383" strokeMiterlimit="10" />
       <path
         d="M60.9753 23.3437C61.8554 23.3437 62.5688 22.6303 62.5688 21.7502C62.5688 20.8702 61.8554 20.1567 60.9753 20.1567C60.0953 20.1567 59.3818 20.8702 59.3818 21.7502C59.3818 22.6303 60.0953 23.3437 60.9753 23.3437Z"
         fill="#E2BA86"
         stroke="#E2BA86"
-        stroke-width="2.13383"
+        strokeWidth="2.13383"
         strokeMiterlimit="10"
       />
       <path
         d="M74.6855 86.6815C75.2991 87.1303 75.9402 87.5607 76.5904 87.9637C86.5819 94.237 98.5332 94.8139 108.635 90.5554C108.671 90.5371 108.708 90.5279 108.744 90.5096C108.232 79.5199 102.517 68.9424 92.498 62.6508C91.0235 61.7258 89.5033 60.9199 87.9556 60.2422"
         stroke="#E2BA86"
-        stroke-width="2.13383"
+        strokeWidth="2.13383"
         strokeMiterlimit="10"
       />
-      <path d="M60.3438 60.1138L91.3805 79.6113" stroke="#E2BA86" stroke-width="2.13383" strokeMiterlimit="10" />
+      <path d="M60.3438 60.1138L91.3805 79.6113" stroke="#E2BA86" strokeWidth="2.13383" strokeMiterlimit="10" />
       <path
         d="M91.4539 81.2505C92.3339 81.2505 93.0474 80.5371 93.0474 79.657C93.0474 78.7769 92.3339 78.0635 91.4539 78.0635C90.5738 78.0635 89.8604 78.7769 89.8604 79.657C89.8604 80.5371 90.5738 81.2505 91.4539 81.2505Z"
         fill="#E2BA86"
         stroke="#E2BA86"
-        stroke-width="2.13383"
+        strokeWidth="2.13383"
         strokeMiterlimit="10"
       />
       <path
         d="M84.8586 91.1685C84.8586 95.6742 81.2046 99.3283 76.6988 99.3283C75.1785 99.3283 73.759 98.9162 72.541 98.1927"
         stroke="#E2BA86"
-        stroke-width="2.26204"
+        strokeWidth="2.26204"
         strokeMiterlimit="10"
       />
       <path
         d="M44.7574 97.2955C40.856 99.5484 35.8649 98.2113 33.612 94.31C32.8519 92.9912 32.5039 91.5534 32.5222 90.1431"
         stroke="#E2BA86"
-        stroke-width="2.26204"
+        strokeWidth="2.26204"
         strokeMiterlimit="10"
       />
       <path
         d="M19.3973 65.6269C15.496 63.374 14.1589 58.3829 16.4118 54.4815C17.1719 53.1628 18.2434 52.1462 19.4706 51.4502"
         stroke="#E2BA86"
-        stroke-width="2.26204"
+        strokeWidth="2.26204"
         strokeMiterlimit="10"
       />
       <path
         d="M34.1416 27.8312C34.1416 23.3255 37.7957 19.6714 42.3014 19.6714C43.8217 19.6714 45.2412 20.0835 46.4592 20.807"
         stroke="#E2BA86"
-        stroke-width="2.26204"
+        strokeWidth="2.26204"
         strokeMiterlimit="10"
       />
       <path
         d="M74.2461 21.7042C78.1474 19.4514 83.1386 20.7884 85.3915 24.6898C86.1516 26.0085 86.4996 27.4464 86.4813 28.8567"
         stroke="#E2BA86"
-        stroke-width="2.26204"
+        strokeWidth="2.26204"
         strokeMiterlimit="10"
       />
       <path
         d="M99.6035 53.373C103.505 55.6259 104.842 60.6171 102.589 64.5184C101.829 65.8372 100.757 66.8537 99.5303 67.5497"
         stroke="#E2BA86"
-        stroke-width="2.26204"
+        strokeWidth="2.26204"
         strokeMiterlimit="10"
       />
     </g>
@@ -232,9 +232,9 @@ const PhoneIcon = () => (
     <path
       d="M18.283 16.4903C18.283 16.4903 17.1243 17.6283 16.8404 17.9619C16.3778 18.4555 15.8328 18.6886 15.1184 18.6886C15.0497 18.6886 14.9764 18.6886 14.9077 18.684C13.5475 18.5972 12.2836 18.067 11.3356 17.6146C8.74345 16.3623 6.46734 14.5844 4.57592 12.3312C3.01424 10.4528 1.97007 8.7161 1.27854 6.8514C0.852626 5.71339 0.696916 4.82674 0.765611 3.99037C0.811408 3.45564 1.01749 3.01232 1.39761 2.63298L2.95929 1.07449C3.18369 0.864259 3.42184 0.75 3.6554 0.75C3.94392 0.75 4.17749 0.923673 4.32404 1.06992C4.32862 1.07449 4.3332 1.07906 4.33778 1.08364C4.61714 1.34414 4.88276 1.61379 5.16212 1.90173C5.30409 2.04798 5.45064 2.19423 5.59719 2.34505L6.84745 3.59275C7.3329 4.07721 7.3329 4.5251 6.84745 5.00956C6.71464 5.1421 6.58641 5.27464 6.4536 5.40261C6.0689 5.79565 6.3711 5.49407 5.97267 5.85056C5.96351 5.8597 5.95435 5.86427 5.94977 5.87341C5.55591 6.26646 5.62919 6.65037 5.71162 6.91088C5.7162 6.92459 5.72078 6.9383 5.72536 6.95201C6.05052 7.73811 6.50849 8.4785 7.20461 9.36058L7.20919 9.36515C8.47318 10.9191 9.80587 12.1302 11.276 13.058C11.4637 13.1768 11.6561 13.2728 11.8393 13.3642C12.0041 13.4465 12.1598 13.5242 12.2926 13.6064C12.311 13.6156 12.3293 13.6293 12.3476 13.6384C12.5033 13.7161 12.6499 13.7527 12.801 13.7527C13.1811 13.7527 13.4193 13.515 13.4971 13.4373L14.3948 12.5415C14.5505 12.3861 14.7978 12.1987 15.0863 12.1987C15.3703 12.1987 15.6038 12.3769 15.7458 12.5323C15.7504 12.5369 15.7504 12.5369 15.755 12.5415L18.2784 15.0597C18.7501 15.5259 18.283 16.4903 18.283 16.4903Z"
       stroke="#FEFFFF"
-      stroke-width="1.5"
+      strokeWidth="1.5"
       strokeLinecap="round"
-      stroke-linejoin="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -244,9 +244,9 @@ const MailIcon = () => (
     <path
       d="M1.875 1.93382L9.75 8.44485L18.1875 1.93382M7.40589 7.75005L1.875 13.7721M17.625 13.2788L12.0934 7.75005M3 14.75C1.75736 14.75 0.75 13.69 0.75 12.3824V3.11765C0.75 1.81003 1.75736 0.75 3 0.75H16.5C17.7426 0.75 18.75 1.81003 18.75 3.11765V12.3824C18.75 13.69 17.7426 14.75 16.5 14.75H3Z"
       stroke="#FEFFFF"
-      stroke-width="1.5"
+      strokeWidth="1.5"
       strokeLinecap="round"
-      stroke-linejoin="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -256,12 +256,12 @@ const MapPinIcon = () => (
     <path
       d="M8.26304 19.95C8.26304 19.95 15.7761 13.2717 15.7761 8.26304C15.7761 4.1137 12.4124 0.75 8.26304 0.75C4.1137 0.75 0.75 4.1137 0.75 8.26304C0.75 13.2717 8.26304 19.95 8.26304 19.95Z"
       stroke="#FEFFFF"
-      stroke-width="1.5"
+      strokeWidth="1.5"
     />
     <path
       d="M10.6634 7.95015C10.6634 9.27563 9.58883 10.3502 8.26335 10.3502C6.93787 10.3502 5.86335 9.27563 5.86335 7.95015C5.86335 6.62467 6.93787 5.55015 8.26335 5.55015C9.58883 5.55015 10.6634 6.62467 10.6634 7.95015Z"
       stroke="#FEFFFF"
-      stroke-width="1.5"
+      strokeWidth="1.5"
     />
   </svg>
 );
@@ -382,7 +382,6 @@ export const Footer = () => {
             {/* --- RIGHT SECTION: LINKS & CONTACT --- */}
             <div className="flex flex-col md:flex-row gap-16  pt-2">
               {/* Navigation Column */}
-              
 
               {/* Get in Touch Column */}
               <div className="flex flex-col gap-8">
@@ -392,10 +391,14 @@ export const Footer = () => {
                 <div className="flex flex-col gap-4">
                   <div className="flex items-center gap-4">
                     <MailIcon />
-                    <a href="mailto:contact@edenhotel.com" className="hover:underline">contact@edenhotel.com</a>
+                    <a href="mailto:contact@edenhotel.com" className="hover:underline">
+                      contact@edenhotel.com
+                    </a>
                   </div>
                   <div className="ml-9">
-                    <a href="mailto:website.feedback@edenhotel.com" className="hover:underline">website.feedback@edenhotel.com</a>
+                    <a href="mailto:website.feedback@edenhotel.com" className="hover:underline">
+                      website.feedback@edenhotel.com
+                    </a>
                   </div>
                 </div>
 
@@ -436,7 +439,7 @@ export const Footer = () => {
           </div>
 
           {/* Main Header */}
-          <h3 className="text-xl font-medium mb-6 font-serif">For Reservation Contact</h3>
+          <h3 className="text-xl font-medium mb-6 ">For Reservation Contact</h3>
 
           {/* Section 1: Hotel Éden, Karwar */}
           <div className="flex flex-col gap-6 mb-8">
@@ -502,20 +505,24 @@ export const Footer = () => {
             </div>
           </div>
 
-          <div className="h-px bg-[#FAF5EB]/20 w-full my-4" />
+          <div className="h-px bg-[#FAF5EB]/20 w-full mt-4 mb-8" />
 
           {/* Section 3: Get in Touch */}
-          <div className="flex flex-col gap-4 mt-2">
-            <h3 className="text-xl font-medium font-serif mb-2">Get in Touch</h3>
+          <div className="flex flex-col gap-4 ">
+            <h3 className="text-xl font-medium  mb-2">Get in Touch</h3>
 
             {/* -- NEW MAIL SECTION -- */}
             <div className="flex flex-col gap-3">
               <div className="flex items-center gap-4">
                 <MailIcon />
-                <a href="mailto:contact@edenhotel.com" className="hover:underline">contact@edenhotel.com</a>
+                <a href="mailto:contact@edenhotel.com" className="hover:underline">
+                  contact@edenhotel.com
+                </a>
               </div>
               <div className="ml-9">
-                <a href="mailto:website.feedback@edenhotel.com" className="hover:underline">website.feedback@edenhotel.com</a>
+                <a href="mailto:website.feedback@edenhotel.com" className="hover:underline">
+                  website.feedback@edenhotel.com
+                </a>
               </div>
             </div>
 
@@ -547,11 +554,9 @@ export const Footer = () => {
           {/* <div className="h-px bg-[#FAF5EB]/20 w-full mb-8" /> */}
 
           {/* Navigation Grid */}
-       
         </div>
 
         {/* --- SECTION 2: DESTINATIONS ACCORDION --- */}
-      
 
         {/* --- SECTION 3: OUR BRANDS --- */}
         <div className="border-t border-[#FAF5EB]/20 py-10 hidden lg:flex flex-col lg:flex-row items-center">
@@ -603,7 +608,7 @@ export const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="border-t lg:hidden border-[#FAF5EB]/20 py-10 flex flex-col items-center">
+        <div className="border-t-[2px] lg:hidden border-[#FAF5EB]/20 py-10 flex flex-col items-center">
           <h4 className="text-2xl mb-10 text-center whitespace-nowrap">Our Brands</h4>
           <div className="flex flex-wrap justify-center items-center w-full gap-8">
             <div className="relative h-auto w-auto">
@@ -665,7 +670,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="border-y  border-[#FAF5EB]/20 py-8 md:hidden flex flex-col justify-center items-center text-sm tracking-wide">
+        <div className="border-y-[2px]  border-[#FAF5EB]/20 py-8 md:hidden flex flex-col justify-center items-center text-sm tracking-wide">
           <div className="flex gap-6">
             <Link href="/terms-and-conditions">Terms of Service</Link>
             <span className="w-[1px] h-6 bg-[#FAF5EB]"></span>

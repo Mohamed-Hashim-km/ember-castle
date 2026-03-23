@@ -47,7 +47,7 @@ const AboutLocation = () => {
   const scrollbarProgress = DUMMY_POSTS.length > 1 ? activeIndex / (DUMMY_POSTS.length - 1) : 0;
 
   return (
-    <div className="pt-12 pb-5 md:pb-0 md:pt-32 bg-white">
+    <div className=" pb-5 md:pb-0 md:pt-32 bg-white">
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <div className="flex justify-center text-center mb-8 md:mb-14">

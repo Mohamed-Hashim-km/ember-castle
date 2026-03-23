@@ -24,7 +24,7 @@ export const CustomScrollbar = ({
   progress,
   totalSlides,
   onSeek,
-  thumbColor = "#E2BA86", // Applied your requested color here
+  thumbColor = "#E2BA86",
   trackColor = "#E5E5E5",
 }: CustomScrollbarProps) => {
   const thumbWidthPercent = totalSlides > 0 ? 100 / totalSlides : 100;
@@ -90,13 +90,11 @@ export const SanctuariesSwiper = () => {
     { title: "3-Bedroom\nFamily Villa", price: "1,265", image: "/1.png" }
   ];
 
-  // Calculate smooth progress based on the real index (0 to 1)
-  // This is required because loop=true causes raw swiper.progress to jump
   const scrollbarProgress = rooms.length > 1 ? activeIndex / (rooms.length - 1) : 0;
 
   return (
     <section className=" md:py-24 w-full relative overflow-hidden md:overflow-visible">
-      <div className="container mx-auto px-4 md:px-12 lg:px-28">
+      <div className="container mx-auto px-4 md:px-12 lg:px-28 relative">
         <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-8 md:mb-14 text-primary leading-tight">
           The Sanctuaries
         </h2>
@@ -168,26 +166,25 @@ export const SanctuariesSwiper = () => {
             />
           </div>
         </div>
-        
+
+        {/* Custom Navigation Buttons (Desktop) - No background or borders */}
+        <button 
+          className="hidden md:flex absolute top-[60%] lg:top-[50%] left-0 md:left-4 z-20 -translate-x-1/2 -translate-y-1/2 w-12 h-12 items-center justify-center cursor-pointer transition-opacity duration-300 hover:opacity-70"
+          onClick={() => swiperRef.current?.slidePrev()}
+          aria-label="Previous slide"
+        >
+          <LeftArrow />
+        </button>
+
+        <button 
+          className="hidden md:flex absolute top-[60%] lg:top-[50%] right-0 md:right-4 z-20 translate-x-1/2 -translate-y-1/2 w-12 h-12 items-center justify-center cursor-pointer transition-opacity duration-300 hover:opacity-70"
+          onClick={() => swiperRef.current?.slideNext()}
+          aria-label="Next slide"
+        >
+          <RightArrow />
+        </button>
 
       </div>
-      
-      {/* Custom Navigation Buttons (Desktop) */}
-      <button 
-        className="hidden md:flex absolute top-[60%] lg:top-[50%] left-2 lg:left-8 -translate-y-1/2 z-20 w-12 h-12 rounded-full items-center justify-center border transition-colors cursor-pointer"
-        onClick={() => swiperRef.current?.slidePrev()}
-        aria-label="Previous slide"
-      >
-        <LeftArrow />
-      </button>
-
-      <button 
-        className="hidden md:flex absolute top-[60%] lg:top-[50%] right-2 lg:right-8 -translate-y-1/2 z-20 w-12 h-12 rounded-full items-center justify-center border transition-colors cursor-pointer"
-        onClick={() => swiperRef.current?.slideNext()}
-        aria-label="Next slide"
-      >
-        <RightArrow />
-      </button>
     </section>
   );
 };

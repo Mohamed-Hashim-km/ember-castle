@@ -94,7 +94,7 @@ export const SanctuariesSwiper = () => {
 
   return (
     <section className=" md:py-24 w-full relative overflow-hidden md:overflow-visible">
-      <div className="container mx-auto px-4 md:px-12 lg:px-28 relative">
+      <div className="container mx-auto  md:px-12 lg:px-28 relative">
         <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-8 md:mb-14 text-primary leading-tight">
           The Sanctuaries
         </h2>

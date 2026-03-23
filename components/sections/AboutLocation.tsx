@@ -48,7 +48,7 @@ const AboutLocation = () => {
 
   return (
     <div className=" pb-5 md:pb-0 md:pt-32 bg-white">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto md:px-4">
         {/* Header Section */}
         <div className="flex justify-center text-center mb-8 md:mb-14">
           <div className="md:max-w-xl">

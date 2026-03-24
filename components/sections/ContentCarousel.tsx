@@ -14,28 +14,28 @@ import "swiper/css/navigation";
 const dummyItems = [
   {
     image: "/1.png", // Replace with your actual image paths
-    title: "Premium Room",
-    description: "Experience luxury and comfort in our spaciously designed premium rooms.",
+    title: "Tulip",
+    description: "Global Culinary Narrative. Global plates served in a polished setting. From coastal harvests to international flavors, every meal is a moment worth savoring.",
   },
   {
     image: "/1.png",
-    title: "Dormitories",
-    description: "Perfect for group stays, offering comfortable bedding and shared premium amenities.",
+    title: "Golden Leaf Spa",
+    description: "A wellness sanctuary where skilled therapies and a calming ambience restore balance to the body and mind.",
   },
   {
     image: "/1.png",
-    title: "Luxury Villas",
-    description: "Exclusive private villas offering the ultimate serene getaway and privacy.",
+    title: "Barbecue & Embers",
+    description: "As dusk falls, the estate glows. Experience open-air evenings featuring smoky grills, glowing bonfires, and the Gokarna sky.",
   },
   {
     image: "/1.png",
-    title: "Tulip Dining",
-    description: "Savor exquisite culinary delights at our signature in-house restaurant.",
+    title: "The Poolside Lounge",
+    description: "A geometric social space designed for sun-drenched afternoons and refreshing swims.",
   },
   {
     image: "/1.png",
-    title: "Event Spaces",
-    description: "Versatile and elegant spaces tailored for your memorable celebrations.",
+    title: "Movement & Leisure",
+    description: "A well-equipped fitness corner for morning rhythms and a sprawling lawn area for private celebrations under the stars.",
   },
 ];
 

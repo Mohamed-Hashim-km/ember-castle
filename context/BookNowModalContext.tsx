@@ -8,6 +8,7 @@ export interface ReservationData {
   to?: Date;
   adults: number;
   children: number;
+  roomType?: string;
 }
 
 interface BookNowModalContextProps {

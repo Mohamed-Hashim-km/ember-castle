@@ -39,7 +39,7 @@ const BookingModal = () => {
   const router = useRouter();
 
   // Hardcoded for Ember Castle
-  const roomOptions = ["Premium Room", "Dormitories", "Villas"];
+  const roomOptions = ["Premium Rooms", "Villa Room 1", "Villa Room 2", "Villa Room 3", "Dormitory Rooms", "Tent"];
   const diningOptions = ["Tulip"];
   const reservationOptions = ["Room Booking", "Dining Reservation", "Spa"];
 
@@ -73,6 +73,7 @@ const BookingModal = () => {
       setDates(newDates);
       setAdults(reservationData.adults || 1);
       setChildren(reservationData.children || 0);
+      if (reservationData.roomType) setRoomType(reservationData.roomType);
     }
   }, [isOpen, reservationData]);
 
@@ -201,8 +202,8 @@ const BookingModal = () => {
     let specificSelectionValue: string | undefined;
     if (reservationType === "Room Booking" && roomType) {
       specificSelectionValue = roomType;
-    } else if (reservationType === "Dining Reservation" && diningOption) {
-      specificSelectionValue = diningOption;
+    } else if (reservationType === "Dining Reservation") {
+      specificSelectionValue = "Tulip";
     } else {
       specificSelectionValue = reservationType;
     }
@@ -218,7 +219,7 @@ const BookingModal = () => {
       diningOption,
       adults,
       children,
-      premise: specificSelectionValue,
+      premise: "Landing Page",
       preferredFrom,
       preferredTo,
       description,
@@ -462,10 +463,6 @@ const BookingModal = () => {
                   <Select label="ROOM TYPE" options={roomOptions} value={roomType} onChange={(e) => setRoomType(e.target.value)} />
                 )}
 
-                {/* Dining Option (Conditional) */}
-                {reservationType === "Dining Reservation" && (
-                  <Select label="DINING OPTION" options={diningOptions} value={diningOption} onChange={(e) => setDiningOption(e.target.value)} />
-                )}
 
                 {/* Preferred Dates */}
                 <div
@@ -509,12 +506,13 @@ const BookingModal = () => {
                   <div className="relative w-full">
                     <textarea
                       value={description}
-                      onChange={(e) => setDescription(e.target.value)}
+                      onChange={(e) => setDescription(e.target.value.slice(0, 250))}
                       rows={4}
+                      maxLength={250}
                       placeholder="Please mention any special requests or preferences..."
                       className="w-full bg-transparent text-primary border border-primary p-4 placeholder:text-secondary outline-none focus:outline-none resize-none rounded-none"
                     ></textarea>
-                    <span className="absolute top-2 right-3 text-[10px] text-primary">{description.length}/125</span>
+                    <span className="absolute top-2 right-3 text-[10px] text-primary">{description.length}/250</span>
                   </div>
                 </div>
 

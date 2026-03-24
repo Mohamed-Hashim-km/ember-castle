@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Button } from "../ui/Button";
+import { useBookNowModal } from "@/context/BookNowModalContext";
 
 // ==========================================
 // 1. REUSABLE CUSTOM SCROLLBAR COMPONENT
@@ -82,18 +83,22 @@ const RightArrow = () => (
 export const SanctuariesSwiper = () => {
   const swiperRef = useRef<any>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const { openModal } = useBookNowModal();
 
   const rooms = [
-    { title: "Two-Level\nLuxury Villa", price: "1,265", image: "/1.png" },
-    { title: "1-Bedroom Pool\nView Villa", price: "1,265", image: "/1.png" },
-    { title: "2-Bedroom\nFamily Villa", price: "1,265", image: "/1.png" },
-    { title: "3-Bedroom\nFamily Villa", price: "1,265", image: "/1.png" }
+    { title: "Premium Rooms", price: "3,500", unit: "room", image: "/1.png" },
+    { title: "Villa Room 1", price: "10,000", unit: "room", image: "/1.png" },
+    { title: "Villa Room 2", price: "5,000", unit: "room", image: "/1.png" },
+    { title: "Villa Room 3", price: "7,500", unit: "room", image: "/1.png" },
+    { title: "Dormitory Rooms", price: "1,500", unit: "person", image: "/1.png" },
+    { title: "Tent", price: "1000", unit: "person", image: "/1.png" },
+
   ];
 
   // Duplicate the array to ensure Swiper has enough slides to loop smoothly
   const displayRooms = [...rooms, ...rooms];
 
-  // Calculate progress purely based on the original 4 items
+  // Calculate progress purely based on the original items
   const scrollbarProgress = rooms.length > 1 ? activeIndex / (rooms.length - 1) : 0;
 
   return (
@@ -102,10 +107,11 @@ export const SanctuariesSwiper = () => {
         <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-8 md:mb-14 text-primary leading-tight">
           The Sanctuaries
         </h2>
+      
 
         <div className="w-full">
           <Swiper
-            modules={[Navigation,Autoplay]}
+            modules={[Navigation, Autoplay]}
             spaceBetween={16}
             slidesPerView={1.2}
             centeredSlides={true}
@@ -118,7 +124,7 @@ export const SanctuariesSwiper = () => {
               swiperRef.current = swiper;
             }}
             onSlideChange={(swiper) => {
-              // Modulo division ensures the index stays between 0 and 3
+              // Modulo division ensures the index stays between 0 and the actual room count
               setActiveIndex(swiper.realIndex % rooms.length);
             }}
             breakpoints={{
@@ -131,7 +137,7 @@ export const SanctuariesSwiper = () => {
             {displayRooms.map((room, index) => (
               <SwiperSlide key={index} className="h-auto">
                 <div className="flex flex-col h-full">
-                  <div className="relative w-full aspect-4/5 lg:aspect-3/3 mb-6 overflow-hidden bg-gray-100">
+                  <div className="relative w-full aspect-4/5 lg:aspect-4/5 mb-6 overflow-hidden bg-gray-100">
                     <Image
                       src={room.image}
                       alt={room.title.replace("\n", " ")}
@@ -146,14 +152,31 @@ export const SanctuariesSwiper = () => {
                       <h3 className="text-primary font-medium text-base md:text-xl md:mb-6 leading-[1.4] transition-colors duration-300 whitespace-pre-line mr-4">
                         {room.title}
                       </h3>
-                      <div className="text-right flex flex-col items-end min-w-[60px]">
-                        <span className="block text-sm text-secondary uppercase tracking-widest mb-1">INR</span>
-                        <span className="block text-lg text-secondary font-light">{room.price}</span>
+                      <div className="text-right flex flex-col items-end min-w-[75px]">
+                        <span className="block text-xs text-secondary uppercase tracking-widest mb-1">INR</span>
+                        {/* Modified section: Price and tax on the same line */}
+                        <div className="flex items-baseline gap-1">
+                          <span className="text-lg text-secondary font-medium">{room.price}</span>
+                          <span className="text-[10px] text-secondary uppercase whitespace-nowrap">
+                            + tax {room.unit === "person" ? "/ person" : ""}
+                          </span>
+                        </div>
                       </div>
                     </div>
                     
                     <div className="mt-auto items-start flex">
-                      <Button variant="tertiary">Check Availability</Button>
+                      <Button
+                        variant="tertiary"
+                        onClick={() =>
+                          openModal({
+                            roomType: room.title,
+                            adults: 1,
+                            children: 0,
+                          })
+                        }
+                      >
+                        Check Availability
+                      </Button>
                     </div>
                   </div>
                 </div>
@@ -165,7 +188,7 @@ export const SanctuariesSwiper = () => {
           <div className="md:hidden">
             <CustomScrollbar 
               progress={scrollbarProgress} 
-              totalSlides={rooms.length} // Force the scrollbar to only see 4 slides
+              totalSlides={rooms.length} // Force the scrollbar to only see the unique slides
               onSeek={(targetIndex) => {
                 swiperRef.current?.slideToLoop(targetIndex);
               }} 
@@ -173,7 +196,7 @@ export const SanctuariesSwiper = () => {
           </div>
         </div>
 
-        {/* Custom Navigation Buttons (Desktop) - No background or borders */}
+        {/* Custom Navigation Buttons (Desktop) */}
         <button 
           className="hidden md:flex absolute top-[60%] lg:top-[50%] left-0 md:left-4 z-20 -translate-x-1/2 -translate-y-1/2 w-12 h-12 items-center justify-center cursor-pointer transition-opacity duration-300 hover:opacity-70"
           onClick={() => swiperRef.current?.slidePrev()}

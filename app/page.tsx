@@ -6,7 +6,6 @@ import { Hero } from "@/components/sections/Hero";
 import { ImageCtaSection } from "@/components/sections/ImageCtaSection";
 import RatingFeatureSection from "@/components/sections/RatingFeatureSection";
 import { SanctuariesSwiper } from "@/components/sections/SanctuariesSwiper";
-import Image from "next/image";
 
 export default function Home() {
   return (

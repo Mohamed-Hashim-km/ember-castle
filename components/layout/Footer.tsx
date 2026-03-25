@@ -405,7 +405,7 @@ export const Footer = () => {
                 {/* Social Icons */}
                 <div className="flex gap-4 mt-2">
                   <Link
-                    href="https://www.instagram.com/hoteleden7?igsh=OW54YTRjdm4zdjVo"
+                    href="https://www.instagram.com/hoteledenkarwar"
                     target="_blank"
                     className="w-8 h-8 flex items-center justify-center rounded"
                   >
@@ -528,7 +528,7 @@ export const Footer = () => {
 
             <div className="flex gap-4">
               <Link
-                href="https://www.instagram.com/hoteleden7?igsh=OW54YTRjdm4zdjVo"
+                href="https://www.instagram.com/hoteledenkarwar"
                 target="_blank"
                 className="w-8 h-8 flex items-center justify-center rounded bg-white/10 hover:bg-white/20"
               >
@@ -663,6 +663,7 @@ export const Footer = () => {
         {/* --- SECTION 4: COPYRIGHT --- */}
         <div className="border-t border-[#FAF5EB]/20 pt-8 hidden md:flex flex-col-reverse md:flex-row justify-between items-center text-xs tracking-wide">
           <p className="mb-4 md:mb-0">Copyright © {copyrightYear} Milan Hospitality and Management Services. All rights reserved.</p>
+           <Link href="https://www.megamind.studio/" target="_blank" className="">Designed and Maintained by Megamind Studios</Link>
           <div className="flex gap-6">
             <Link href="/terms-and-conditions">Terms of Service</Link>
             <span className="w-[1px] h-3 bg-[#FAF5EB]"></span>
@@ -676,9 +677,17 @@ export const Footer = () => {
             <span className="w-[1px] h-6 bg-[#FAF5EB]"></span>
             <Link href="/privacy-policy">Privacy Policy</Link>
           </div>
+          
         </div>
-        <div className="border-t border-[#FAF5EB]/20 pt-8 md:hidden flex flex-col justify-between items-center text-sm tracking-wide">
-          <p className="mb-4 text-center md:mb-0">Copyright © {copyrightYear} Milan Hospitality and Management Services. All rights reserved.</p>
+      <div className="border-t border-[#FAF5EB]/20 pt-8 md:hidden flex flex-col justify-between items-center text-sm tracking-wide">
+          <p className="mb-2 text-center md:mb-0">Copyright © {copyrightYear} Milan Hospitality and Management Services. All rights reserved.</p>
+          <Link 
+            href="https://www.megamind.studio/" 
+            target="_blank" 
+            className="mb-4 text-center  text-xs  transition-colors"
+          >
+            Designed and Maintained by Megamind Studios
+          </Link>
         </div>
       </div>
     </footer>

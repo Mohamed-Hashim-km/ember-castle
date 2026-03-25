@@ -18,22 +18,43 @@ const DUMMY_POSTS = [
   {
     id: 1,
     image: "/1.png",
-    category: "2 KM AWAY",
-    title: "Rabindranath Tagore Beach",
+    category: "4 KM AWAY",
+    title: "Shiva Cave",
     description: "A beautiful stretch of sand perfect for evening strolls.",
   },
   {
     id: 2,
     image: "/1.png",
-    category: "10 KM AWAY",
-    title: "Devbagh Beach Resort",
+    category: "20 KM AWAY",
+    title: "Mirjan Fort",
     description: "A tranquil island getaway surrounded by casuarina groves.",
   },
   {
     id: 3,
     image: "/1.png",
-    category: "6 KM AWAY",
-    title: "Sadashivgad Fort",
+    category: "9 KM AWAY",
+    title: "Mahabaleshwar Temple",
+    description: "Historic ruins offering panoramic views of the Kali River.",
+  },
+  {
+    id: 4,
+    image: "/1.png",
+    category: "5 KM AWAY",
+    title: "Kudle Beach",
+    description: "A beautiful stretch of sand perfect for evening strolls.",
+  },
+  {
+    id: 5,
+    image: "/1.png",
+    category: "7 KM AWAY",
+    title: "Half Moon Beach",
+    description: "A tranquil island getaway surrounded by casuarina groves.",
+  },
+  {
+    id: 6,
+    image: "/1.png",
+    category: "2 KM AWAY",
+    title: "Gokarna Beach",
     description: "Historic ruins offering panoramic views of the Kali River.",
   },
 ];
@@ -43,45 +64,28 @@ const AboutLocation = () => {
   const [nextEl, setNextEl] = useState<HTMLElement | null>(null);
   const swiperRef = useRef<any>(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  
-  // Track if we are on a desktop screen
-  const [isDesktop, setIsDesktop] = useState(false);
 
-  useEffect(() => {
-    const handleResize = () => setIsDesktop(window.innerWidth >= 1024);
-    handleResize(); // Check immediately on mount
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  // ONLY duplicate the array if we are on mobile/tablet. On desktop, keep the original 3.
-  const displayPosts = isDesktop ? DUMMY_POSTS : [...DUMMY_POSTS, ...DUMMY_POSTS];
-
-  // Calculate progress purely based on the original 3 items
+  // Calculate progress based on the 6 items
   const scrollbarProgress = DUMMY_POSTS.length > 1 ? activeIndex / (DUMMY_POSTS.length - 1) : 0;
 
   return (
-    <div className=" pb-5 md:pb-0 md:pt-32 bg-white">
+    <div className="pb-5 md:pb-0 md:pt-32 bg-white">
       <div className="container mx-auto md:px-4">
         {/* Header Section */}
         <div className="flex justify-center text-center mb-8 md:mb-14">
           <div className="md:max-w-xl">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight  text-primary">
-              {STATIC_TITLE}
-            </h2>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight text-primary">{STATIC_TITLE}</h2>
           </div>
         </div>
 
         {/* Swiper Section Container */}
         <div className="w-full relative group/slider">
           <Swiper
-            // The key forces Swiper to completely re-render when switching between desktop/mobile modes
-            key={isDesktop ? "desktop-swiper" : "mobile-swiper"}
             modules={[Navigation, Autoplay]}
             spaceBetween={16}
             slidesPerView={1.2}
             centeredSlides={true}
-            loop={!isDesktop} // Turn loop OFF on desktop, ON for mobile
+            loop={true} // Loop turned ON globally
             navigation={{
               prevEl: prevEl,
               nextEl: nextEl,
@@ -90,24 +94,23 @@ const AboutLocation = () => {
               swiperRef.current = swiper;
             }}
             onSlideChange={(swiper) => {
-              // Modulo division ensures the index stays between 0 and 2
-              setActiveIndex(swiper.realIndex % DUMMY_POSTS.length);
+              // realIndex automatically accounts for loop duplicates
+              setActiveIndex(swiper.realIndex);
             }}
             autoplay={{ delay: 3000, disableOnInteraction: false }}
             breakpoints={{
-              640: { slidesPerView: 1, loop: true, spaceBetween: 24, centeredSlides: false },
-              768: { slidesPerView: 2, loop: true, spaceBetween: 24, centeredSlides: false },
-              1024: { slidesPerView: 3, loop: false, spaceBetween: 24, centeredSlides: false },
+              640: { slidesPerView: 1, spaceBetween: 24, centeredSlides: false },
+              768: { slidesPerView: 2, spaceBetween: 24, centeredSlides: false },
+              1024: { slidesPerView: 3, spaceBetween: 24, centeredSlides: false }, // Removed loop: false
             }}
             className="pb-4! md:pb-0!"
           >
-            {/* Map over our conditionally duplicated array */}
-            {displayPosts.map((item, index) => (
+            {/* Map directly over DUMMY_POSTS since 6 items are enough to loop */}
+            {DUMMY_POSTS.map((item, index) => (
               <SwiperSlide key={`${item.id}-${index}`} className="h-auto">
                 <div className="h-full">
                   <div className="block h-full">
-                    <div className="group relative h-full min-h-[400px] overflow-hidden  p-8 flex flex-col justify-end items-center transition-all duration-500 ease-in-out cursor-pointer hover:z-10">
-                      
+                    <div className="group relative h-full min-h-[400px] overflow-hidden p-8 flex flex-col justify-end items-center transition-all duration-500 ease-in-out cursor-pointer hover:z-10">
                       <Image
                         src={item.image}
                         alt={item.title}
@@ -122,14 +125,10 @@ const AboutLocation = () => {
 
                       <div className="relative z-10 text-center">
                         {/* Location / Distance Text */}
-                        <p className="text-white/90 text-sm font-medium mb-2 uppercase tracking-wider">
-                          {item.category}
-                        </p>
+                        <p className="text-white/90 text-sm font-medium mb-2 uppercase tracking-wider">{item.category}</p>
 
                         {/* Title Text */}
-                        <h3 className="text-white text-2xl font-semibold mb-0">
-                          {item.title}
-                        </h3>
+                        <h3 className="text-white text-2xl font-semibold mb-0">{item.title}</h3>
                       </div>
                     </div>
                   </div>
@@ -142,7 +141,7 @@ const AboutLocation = () => {
           <div className="md:hidden pb-4">
             <CustomScrollbar
               progress={scrollbarProgress}
-              totalSlides={DUMMY_POSTS.length} // Force the scrollbar to only see 3 slides
+              totalSlides={DUMMY_POSTS.length}
               onSeek={(targetIndex) => {
                 swiperRef.current?.slideToLoop(targetIndex);
               }}
@@ -152,19 +151,10 @@ const AboutLocation = () => {
           {/* Previous Button - desktop only */}
           <button
             ref={(node) => setPrevEl(node)}
-            className="hidden md:flex absolute top-1/2 -left-4 md:-left-6 z-20 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg items-center justify-center text-primary transition-all duration-300 hover:bg-primary hover:text-white disabled:opacity-50 disabled:cursor-not-allowed opacity-0 group-hover/slider:opacity-100"
+            className="hidden md:flex absolute top-1/2 -left-4 md:-left-6 z-20 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg items-center justify-center text-primary transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed opacity-0 group-hover/slider:opacity-100"
             aria-label="Previous slide"
           >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M15 18l-6-6 6-6" />
             </svg>
           </button>
@@ -172,19 +162,10 @@ const AboutLocation = () => {
           {/* Next Button - desktop only */}
           <button
             ref={(node) => setNextEl(node)}
-            className="hidden md:flex absolute top-1/2 -right-4 md:-right-6 z-20 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg items-center justify-center text-primary transition-all duration-300 hover:bg-primary hover:text-white disabled:opacity-50 disabled:cursor-not-allowed opacity-0 group-hover/slider:opacity-100"
+            className="hidden md:flex absolute top-1/2 -right-4 md:-right-6 z-20 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg items-center justify-center text-primary transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed opacity-0 group-hover/slider:opacity-100"
             aria-label="Next slide"
           >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M9 18l6-6-6-6" />
             </svg>
           </button>

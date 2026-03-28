@@ -22,42 +22,41 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://hoteleden.in"),
+  metadataBase: new URL("https://ember-castle.hoteleden.in"),
   title: {
-    template: "%s | Hotel Éden",
-    default: "Hotel Éden - The Epitome of Fine Living",
+    template: "%s | Hotel Éden - Ember Castle, Gokarna",
+    default: "Hotel Éden - Ember Castle, Gokarna",
   },
   description:
-    "A designer boutique hotel in Karwar offering stays, dining, wellness, and event spaces. Experience luxury and comfort at Hotel Éden and Éden Ember Castle.",
+    "Experience a designer boutique hotel stay at Hotel Éden's Ember Castle in Gokarna. Offering luxury stays, dining, wellness, and beautiful scenic spaces.",
   keywords: [
     "Hotel Éden",
-    "Karwar Hotels",
+    "Ember Castle Gokarna",
+    "Hotel Eden Ember Castle",
     "Gokarna Hotels",
-    "Luxury Stay Karwar",
-    "Boutique Hotel Karwar",
-    "Éden Ember Castle",
-    "Hotel near Karwar Beach",
-    "Best Hotel in Karwar",
-    "Spa in Karwar",
+    "Luxury Stay Gokarna",
+    "Boutique Hotel Gokarna",
+    "Ember Castle",
+    "Best Hotel in Gokarna",
     "Spa in Gokarna",
-    "Fine Dining Karwar",
     "Fine Dining Gokarna",
-    "Event Space Karwar",
+    "Event Space Gokarna",
+    "Karwar Hotels",
   ],
   authors: [{ name: "Hotel Éden" }],
   creator: "Hotel Éden",
   publisher: "Hotel Éden",
   openGraph: {
-    title: "Hotel Éden - The Epitome of Fine Living",
-    description: "A designer boutique hotel in Karwar offering stays, dining, wellness, and event spaces.",
-    url: "https://hoteleden.in",
-    siteName: "Hotel Éden",
+    title: "Hotel Éden - Ember Castle, Gokarna",
+    description: "Experience a designer boutique hotel stay at Hotel Éden's Ember Castle in Gokarna. Offering luxury stays, dining, and wellness.",
+    url: "https://ember-castle.hoteleden.in",
+    siteName: "Hotel Éden - Ember Castle",
     images: [
       {
         url: "https://hotel-eden-v2.vercel.app/images/ogImages/home.png", // Using an existing image as default
         width: 1200,
         height: 630,
-        alt: "Hotel Éden Exterior",
+        alt: "Hotel Éden Ember Castle Exterior",
       },
     ],
     locale: "en_US",
@@ -65,8 +64,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hotel Éden - The Epitome of Fine Living",
-    description: "A designer boutique hotel in Karwar offering stays, dining, wellness, and event spaces.",
+    title: "Hotel Éden - Ember Castle, Gokarna",
+    description: "Experience a designer boutique hotel stay at Hotel Éden's Ember Castle in Gokarna.",
     images: ["https://hotel-eden-v2.vercel.app/images/ogImages/home.png"],
   },
   robots: {

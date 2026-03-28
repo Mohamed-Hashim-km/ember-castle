@@ -72,14 +72,14 @@ const DUMMY_POSTS = [
         title: "Mahabaleshwar Temple",
         description: "A historic Shiva temple and spiritual landmark in Gokarna town, revered by pilgrims and visitors alike.",
       },
-      {
-        id: 4,
-        image: "/images/about/mahabaleshwara.webp",
-        category: "Distance: 5.3 km",
-        title: "Shree Mahabaleshwar Temple",
-        description:
-          "The main attraction, this 4th-century temple is dedicated to Lord Shiva and houses the Atmalinga. It is considered as holy as the Kashi Vishwanath temple in Varanasi.",
-      },
+      // {
+      //   id: 4,
+      //   image: "/images/about/mahabaleshwara.webp",
+      //   category: "Distance: 5.3 km",
+      //   title: "Shree Mahabaleshwar Temple",
+      //   description:
+      //     "The main attraction, this 4th-century temple is dedicated to Lord Shiva and houses the Atmalinga. It is considered as holy as the Kashi Vishwanath temple in Varanasi.",
+      // },
 ];
 
 const AboutLocation = () => {

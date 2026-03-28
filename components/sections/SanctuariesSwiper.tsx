@@ -156,7 +156,7 @@ export const SanctuariesSwiper = () => {
                         <span className="block text-xs text-secondary uppercase tracking-widest ">INR</span>
                         {/* Modified section: Price and tax on the same line */}
                         <div className="flex items-baseline gap-1">
-                          <span className="text-lg text-secondary font-medium">{room.price}</span>
+                          <span className="text-base md:text-lg text-secondary font-medium">{room.price}</span>
                           <span className="text-[10px] text-secondary uppercase whitespace-nowrap">
                             + tax {room.unit === "person" ? "/ person" : ""}
                           </span>

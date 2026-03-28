@@ -1,0 +1,20 @@
+# Hotel Éden - Ember Castle, Gokarna
+
+> The Epitome of Fine Living. A designer boutique hotel offering luxury stays, dining, wellness, and scenic event spaces in Gokarna.
+
+Hotel Éden's Ember Castle is a premier luxury destination located in beautiful Gokarna, offering an exceptional experience of elegance and comfort. Our nature-inspired ambience features refined spaces, luxury sanctuaries, and exquisite rooftop dining, making it the perfect getaway.
+
+## Core Features and Sections
+- **Hero & Landing**: Breathtaking introduction to Ember Castle setting the tone for fine living in Gokarna.
+- **Sanctuaries (Rooms & Suites)**: Explore our premium stay options carefully curated for peace and luxury.
+- **Dining**: Rooftop dining within a nature-inspired ambience, combining sophisticated culinary experiences with scenic views.
+- **Location**: Situated in the heart of Gokarna's tranquil landscape, easily accessible with major routes.
+- **Booking**: Hassle-free online booking functionality to plan your visit.
+
+## Pages Index
+- [Home (Landing Page)](https://ember-castle.hoteleden.in/)
+- [Privacy Policy](https://ember-castle.hoteleden.in/privacy-policy)
+- [Terms and Conditions](https://ember-castle.hoteleden.in/terms-and-conditions)
+
+## Contact Information
+For inquiries, guests can find booking options scattered throughout the website to effortlessly secure their luxury stay at Ember Castle, Gokarna.

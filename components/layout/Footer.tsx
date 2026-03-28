@@ -684,7 +684,7 @@ export const Footer = () => {
           <Link 
             href="https://www.megamind.studio/" 
             target="_blank" 
-            className="mb-4 text-center  text-xs  transition-colors"
+            className="mb-4 text-center transition-colors"
           >
             Designed and Maintained by Megamind Studios
           </Link>

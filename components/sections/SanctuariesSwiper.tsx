@@ -149,7 +149,7 @@ export const SanctuariesSwiper = () => {
                   
                   <div className="flex flex-col grow">
                     <div className="flex justify-between items-start mb-6">
-                      <h3 className="text-primary font-medium text-base md:text-xl md:mb-6 leading-[1.4] transition-colors duration-300 whitespace-pre-line mr-4">
+                      <h3 className="text-primary font-medium text-lg md:text-xl md:mb-6 leading-[1.4] transition-colors duration-300 whitespace-pre-line mr-4">
                         {room.title}
                       </h3>
                       <div className="text-right flex flex-col items-end min-w-[75px]">

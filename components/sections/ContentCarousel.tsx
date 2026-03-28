@@ -113,7 +113,7 @@ export const ContentCarousel = () => {
                 </div>
 
                 {/* Text Container */}
-                <h3 className="text-primary font-medium text-base md:text-xl md:mb-4  tracking-wide leading-snug transition-colors duration-300 ">
+                <h3 className="text-primary font-medium text-lg md:text-xl md:mb-4  tracking-wide leading-snug transition-colors duration-300 ">
                   {item.title}
                 </h3>
                 {item.description && <p className="text-secondary text-sm md:text-base leading-relaxed mb-6 flex-grow hidden md:block">{item.description}</p>}

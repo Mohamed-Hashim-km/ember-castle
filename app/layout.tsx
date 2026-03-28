@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     siteName: "Hotel Éden Ember Castle",
     images: [
       {
-        url: "https://hotel-eden-v2.vercel.app/images/og-image.png", // Using an existing image as default
+        url: "https://ember-castle.vercel.app/images/og-image.png", // Using an existing image as default
         width: 1200,
         height: 630,
         alt: "Hotel Éden Ember Castle Exterior",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Hotel Éden Ember Castle, Gokarna",
     description: "Experience a designer boutique hotel stay at Hotel Éden's Ember Castle in Gokarna.",
-    images: ["https://hotel-eden-v2.vercel.app/images/og-image.png"],
+    images: ["https://ember-castle.vercel.app/images/og-image.png"],
   },
   robots: {
     index: true,

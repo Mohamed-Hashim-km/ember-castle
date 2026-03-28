@@ -10,22 +10,23 @@ import { SanctuariesSwiper } from "@/components/sections/SanctuariesSwiper";
 export default function Home() {
   return (
     <div className="">
-      <Hero  videoSrc="https://palegreen-chough-359051.hostingersite.com/hotel-eden-videos/Website%20Video.mp4"
+      <Hero
+        videoSrc="https://palegreen-chough-359051.hostingersite.com/hotel-eden-videos/Home%20Page.mp4"
         title="The Epitome of Fine Living"
         description="A world where elegance is instinctive, comfort is elevated, and every stay is defined by thoughtful refinement."
-        posterSrc="/1.png"/>
-      <AboutLocation/>
+        posterSrc="/images/cover.webp"
+      />
+      <AboutLocation />
 
       <SanctuariesSwiper />
-      <RatingFeatureSection/>
+      <RatingFeatureSection />
 
       <ContentCarousel />
       <FeatureSection />
 
-
       <Faq />
       <ImageCtaSection
-        backgroundImage="/1.png"
+        backgroundImage="/images/footer.webp"
         title="Rooftop Dining Within a Nature-Inspired Ambience of Refined Elegance"
         buttonText="Book Now"
         buttonLink="/"

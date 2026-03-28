@@ -86,12 +86,12 @@ export const SanctuariesSwiper = () => {
   const { openModal } = useBookNowModal();
 
   const rooms = [
-    { title: "Premium Rooms", price: "3,500", unit: "room", image: "/1.png" },
-    { title: "Villa Room 1", price: "10,000", unit: "room", image: "/1.png" },
-    { title: "Villa Room 2", price: "5,000", unit: "room", image: "/1.png" },
-    { title: "Villa Room 3", price: "7,500", unit: "room", image: "/1.png" },
-    { title: "Dormitory Rooms", price: "1,500", unit: "person", image: "/1.png" },
-    { title: "Tent", price: "1000", unit: "person", image: "/1.png" },
+    { title: "Premium Rooms", price: "3,500", unit: "room", image: "/images/rooms/1.webp" },
+    { title: "Villa Room 1", price: "10,000", unit: "room", image: "/images/rooms/2.webp" },
+    { title: "Villa Room 2", price: "5,000", unit: "room", image: "/images/rooms/3.webp" },
+    { title: "Villa Room 3", price: "7,500", unit: "room", image: "/images/rooms/4.webp" },
+    { title: "Dormitory Rooms", price: "1,500", unit: "person", image: "/images/rooms/5.webp" },
+    { title: "Tent", price: "1000", unit: "person", image: "/images/rooms/6.webp" },
 
   ];
 
@@ -153,7 +153,7 @@ export const SanctuariesSwiper = () => {
                         {room.title}
                       </h3>
                       <div className="text-right flex flex-col items-end min-w-[75px]">
-                        <span className="block text-xs text-secondary uppercase tracking-widest mb-1">INR</span>
+                        <span className="block text-xs text-secondary uppercase tracking-widest ">INR</span>
                         {/* Modified section: Price and tax on the same line */}
                         <div className="flex items-baseline gap-1">
                           <span className="text-lg text-secondary font-medium">{room.price}</span>

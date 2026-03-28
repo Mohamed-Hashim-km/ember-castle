@@ -13,27 +13,27 @@ import "swiper/css/navigation";
 // Hardcoded Dummy Data
 const dummyItems = [
   {
-    image: "/1.png", // Replace with your actual image paths
+    image: "/images/indulgeInDistinctive/1.webp", // Replace with your actual image paths
     title: "Tulip",
     description: "Global Culinary Narrative. Global plates served in a polished setting. From coastal harvests to international flavors, every meal is a moment worth savoring.",
   },
   {
-    image: "/1.png",
+    image: "/images/indulgeInDistinctive/2.webp",
     title: "Golden Leaf Spa",
     description: "A wellness sanctuary where skilled therapies and a calming ambience restore balance to the body and mind.",
   },
   {
-    image: "/1.png",
+    image: "/images/indulgeInDistinctive/3.webp",
     title: "Barbecue & Embers",
     description: "As dusk falls, the estate glows. Experience open-air evenings featuring smoky grills, glowing bonfires, and the Gokarna sky.",
   },
   {
-    image: "/1.png",
+    image: "/images/indulgeInDistinctive/4.webp",
     title: "The Poolside Lounge",
     description: "A geometric social space designed for sun-drenched afternoons and refreshing swims.",
   },
   {
-    image: "/1.png",
+    image: "/images/indulgeInDistinctive/5.webp",
     title: "Movement & Leisure",
     description: "A well-equipped fitness corner for morning rhythms and a sprawling lawn area for private celebrations under the stars.",
   },
@@ -100,14 +100,14 @@ export const ContentCarousel = () => {
         >
           {dummyItems.map((item, index) => (
             <SwiperSlide key={index} className="h-auto">
-              <div className="block h-full group cursor-pointer">
+              <div className="block h-full group ">
                 {/* Image Container */}
                 <div className="relative overflow-hidden mb-4 md:mb-6 aspect-[3/3] w-full">
                   <Image
                     src={item.image}
                     alt={item.title}
                     fill
-                    className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
+                    className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
                 </div>

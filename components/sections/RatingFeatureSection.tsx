@@ -44,7 +44,7 @@ const RatingFeatureSection = () => {
           {/* Image Side */}
           <div className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-[600px] overflow-hidden">
             <Image
-              src="/1.png"
+              src="/images/canopy.webp"
               alt="Terrace seating with forest and mountains in background at sunset"
               fill
               className="object-cover"

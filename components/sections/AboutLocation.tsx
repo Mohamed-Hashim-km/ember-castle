@@ -16,47 +16,70 @@ const STATIC_DESCRIPTION = "Explore the hidden gems, serene beaches, and lush gr
 
 const DUMMY_POSTS = [
   {
-    id: 1,
-    image: "/1.png",
-    category: "4 KM AWAY",
-    title: "Shiva Cave",
-    description: "A beautiful stretch of sand perfect for evening strolls.",
-  },
-  {
-    id: 2,
-    image: "/1.png",
-    category: "20 KM AWAY",
-    title: "Mirjan Fort",
-    description: "A tranquil island getaway surrounded by casuarina groves.",
-  },
-  {
-    id: 3,
-    image: "/1.png",
-    category: "9 KM AWAY",
-    title: "Mahabaleshwar Temple",
-    description: "Historic ruins offering panoramic views of the Kali River.",
-  },
-  {
-    id: 4,
-    image: "/1.png",
-    category: "5 KM AWAY",
-    title: "Kudle Beach",
-    description: "A beautiful stretch of sand perfect for evening strolls.",
-  },
-  {
-    id: 5,
-    image: "/1.png",
-    category: "7 KM AWAY",
-    title: "Half Moon Beach",
-    description: "A tranquil island getaway surrounded by casuarina groves.",
-  },
-  {
-    id: 6,
-    image: "/1.png",
-    category: "2 KM AWAY",
-    title: "Gokarna Beach",
-    description: "Historic ruins offering panoramic views of the Kali River.",
-  },
+        id: 1,
+        image: "/images/about/gokarnaMainBeach.webp",
+        category: "Distance: 5.7 km",
+        title: "Gokarna Main Beach",
+        description: "The central town beach is close to the famous temples and local market, great for sunrise and relaxed walks.",
+      },
+      {
+        id: 2,
+        image: "/images/about/halfMoon.webp",
+        category: "Distance: 9 km",
+        title: "Om Beach",
+        description: "One of Gokarna’s most iconic beaches, shaped like the sacred Om symbol, perfect for swimming, sunsets, and water sports.",
+      },
+      {
+        id: 6,
+        image: "/images/about/cavetemple.webp",
+        category: "Distance: 8.7 km",
+        title: "Shiva Cave Temple",
+        description: "A historic Shiva temple and spiritual landmark in Gokarna town, revered by pilgrims and visitors alike.",
+      },
+      {
+        id: 3,
+        image: "/images/about/kudleBeach.webp",
+        category: "Distance: 9.9 km",
+        title: "Kudle Beach",
+        description: "A scenic, laid-back beach ideal for long walks, yoga sessions, and watching the sunset.",
+      },
+      {
+        id: 4,
+        image: "/images/about/omBeach.webp",
+        category: "Distance: 5-6 km",
+        title: "Half Moon Beach",
+        description: "A quieter, more secluded beach accessible via boat or scenic coastal trek from nearby beaches.",
+      },
+      {
+        id: 15,
+        image: "/images/about/maha-ganapati-temple-gokrna.webp",
+        category: "Distance: 5.2 km",
+        title: "Maha Ganapathi Temple",
+        description: "A peaceful stretch of sand beyond Half Moon Beach, perfect for a serene beach escape.",
+      },
+
+      {
+        id: 5,
+        image: "/images/about/paradiseBeach.webp",
+        category: "Distance: 10 km",
+        title: "Paradise Beach",
+        description: "A peaceful stretch of sand beyond Half Moon Beach, perfect for a serene beach escape.",
+      },
+      {
+        id: 6,
+        image: "/images/about/temple.webp",
+        category: "Distance: 5.3 km",
+        title: "Mahabaleshwar Temple",
+        description: "A historic Shiva temple and spiritual landmark in Gokarna town, revered by pilgrims and visitors alike.",
+      },
+      {
+        id: 4,
+        image: "/images/about/mahabaleshwara.webp",
+        category: "Distance: 5.3 km",
+        title: "Shree Mahabaleshwar Temple",
+        description:
+          "The main attraction, this 4th-century temple is dedicated to Lord Shiva and houses the Atmalinga. It is considered as holy as the Kashi Vishwanath temple in Varanasi.",
+      },
 ];
 
 const AboutLocation = () => {

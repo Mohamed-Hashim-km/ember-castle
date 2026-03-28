@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const PrivacyPolicy = () => {
   return (
     <div className="bg-white text-primary">
-      <div className=" pb-10 pt-28 md:pt-54">
+      <div className=" pb-10 pt-28 md:pt-40">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-light  mb-4">Privacy Policy</h1>
           <p className=" text-secondary">Hotel Éden, Karwar</p>

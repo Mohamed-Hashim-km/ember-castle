@@ -31,7 +31,7 @@ const FeatureSection = () => {
                 against the text and the beige background automatically.
             */}
             <div className="lg:col-span-7 relative lg:top-20 h-[300px] md:h-[450px] lg:h-[600px] w-full">
-              <Image src="/1.png" alt="Exclusive dinner setting" fill className="object-cover" />
+              <Image src="/images/explore.webp" alt="Exclusive dinner setting" fill className="object-cover" />
             </div>
 
             {/* Content Section */}

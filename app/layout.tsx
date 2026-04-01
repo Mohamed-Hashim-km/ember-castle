@@ -24,8 +24,8 @@ const jost = Jost({
 export const metadata: Metadata = {
   metadataBase: new URL("https://ember-castle.hoteleden.in"),
   title: {
-    template: "%s | Hotel Éden Ember Castle, Gokarna",
-    default: "Hotel Éden Ember Castle, Gokarna",
+    template: "%s | Ember Castle by Hotel Éden, Gokarna",
+    default: "Ember Castle by Hotel Éden, Gokarna",
   },
   description:
     "Experience a designer boutique hotel stay at Hotel Éden's Ember Castle in Gokarna. Offering luxury stays, dining, wellness, and beautiful scenic spaces.",
@@ -47,16 +47,16 @@ export const metadata: Metadata = {
   creator: "Hotel Éden",
   publisher: "Hotel Éden",
   openGraph: {
-    title: "Hotel Éden Ember Castle, Gokarna",
+    title: "Ember Castle by Hotel Éden, Gokarna",
     description: "Experience a designer boutique hotel stay at Hotel Éden's Ember Castle in Gokarna. Offering luxury stays, dining, and wellness.",
     url: "https://ember-castle.hoteleden.in",
-    siteName: "Hotel Éden Ember Castle",
+    siteName: "Ember Castle by Hotel Éden",
     images: [
       {
         url: "https://ember-castle.vercel.app/images/og-image.png", // Using an existing image as default
         width: 1200,
         height: 630,
-        alt: "Hotel Éden Ember Castle Exterior",
+        alt: "Ember Castle by Hotel Éden Exterior",
       },
     ],
     locale: "en_US",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hotel Éden Ember Castle, Gokarna",
+    title: "Ember Castle by Hotel Éden, Gokarna",
     description: "Experience a designer boutique hotel stay at Hotel Éden's Ember Castle in Gokarna.",
     images: ["https://ember-castle.vercel.app/images/og-image.png"],
   },

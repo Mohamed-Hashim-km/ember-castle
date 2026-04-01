@@ -4,32 +4,32 @@ import React, { useState } from "react";
 import { Dash, Plus02 } from "../utils/Icon";
 
 const faqData = [
- {
-      id: 1,
-      question: "How far is Hotel Éden Ember Castle from Gokarna Main Beach?",
-      answer: "It’s approximately 2.6 km, making beach visits quick and easy.",
-    },
-    {
-      id: 2,
-      question: "Is parking available?",
-      answer: "Yes, the property offers free private parking on site.",
-    },
-    {
-      id: 3,
-      question: "Does the property have dining options?",
-      answer: "Yes, an on-site restaurant serves meals including buffet breakfast with local specialties. ",
-    },
-    {
-      id: 4,
-      question: "Are there activities onsite?",
-      answer:
-        "Guests can enjoy the pool, garden areas, spa facilities, and fitness centre, making this a great pick for both relaxation and adventure.",
-    },
-    {
-      id: 5,
-      question: "Do guests receive any complimentary benefits with their stay?",
-      answer: "Yes, guests are welcomed with a complimentary welcome drink and can enjoy free breakfast during their stay.",
-    },
+  {
+    id: 1,
+    question: "How far is Ember Castle by Hotel Éden from Gokarna Main Beach?",
+    answer: "It’s approximately 2.6 km, making beach visits quick and easy.",
+  },
+  {
+    id: 2,
+    question: "Is parking available?",
+    answer: "Yes, the property offers free private parking on site.",
+  },
+  {
+    id: 3,
+    question: "Does the property have dining options?",
+    answer: "Yes, an on-site restaurant serves meals including buffet breakfast with local specialties. ",
+  },
+  {
+    id: 4,
+    question: "Are there activities onsite?",
+    answer:
+      "Guests can enjoy the pool, garden areas, spa facilities, and fitness centre, making this a great pick for both relaxation and adventure.",
+  },
+  {
+    id: 5,
+    question: "Do guests receive any complimentary benefits with their stay?",
+    answer: "Yes, guests are welcomed with a complimentary welcome drink and can enjoy free breakfast during their stay.",
+  },
 ];
 
 const Faq = () => {

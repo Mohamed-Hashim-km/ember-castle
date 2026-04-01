@@ -404,11 +404,7 @@ export const Footer = () => {
 
                 {/* Social Icons */}
                 <div className="flex gap-4 mt-2">
-                  <Link
-                    href="https://www.instagram.com/hoteledenkarwar"
-                    target="_blank"
-                    className="w-8 h-8 flex items-center justify-center rounded"
-                  >
+                  <Link href="https://www.instagram.com/hoteledenkarwar" target="_blank" className="w-8 h-8 flex items-center justify-center rounded">
                     <InstagramIcon />
                   </Link>
                   <Link
@@ -473,9 +469,9 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Section 2: Hotel Éden Ember Castle, Gokarna */}
+          {/* Section 2: Ember Castle by Hotel Éden, Gokarna */}
           <div className="flex flex-col gap-6 mb-8">
-            <h4 className=" text-lg">Hotel Éden Ember Castle, Gokarna</h4>
+            <h4 className=" text-lg">Ember Castle by Hotel Éden, Gokarna</h4>
 
             {/* Gokarna Rooms */}
             <div className="flex flex-col gap-1 text-[15px] ">
@@ -663,7 +659,9 @@ export const Footer = () => {
         {/* --- SECTION 4: COPYRIGHT --- */}
         <div className="border-t border-[#FAF5EB]/20 pt-8 hidden md:flex flex-col-reverse md:flex-row justify-between items-center text-xs tracking-wide">
           <p className="mb-4 md:mb-0">Copyright © {copyrightYear} Milan Hospitality and Management Services. All rights reserved.</p>
-           <Link href="https://www.megamind.studio/" target="_blank" className="">Designed and Maintained by Megamind Studios</Link>
+          <Link href="https://www.megamind.studio/" target="_blank" className="">
+            Designed and Maintained by Megamind Studios
+          </Link>
           <div className="flex gap-6">
             <Link href="/terms-and-conditions">Terms of Service</Link>
             <span className="w-[1px] h-3 bg-[#FAF5EB]"></span>
@@ -677,15 +675,10 @@ export const Footer = () => {
             <span className="w-[1px] h-6 bg-[#FAF5EB]"></span>
             <Link href="/privacy-policy">Privacy Policy</Link>
           </div>
-          
         </div>
-      <div className="border-t border-[#FAF5EB]/20 pt-8 md:hidden flex flex-col justify-between items-center text-sm tracking-wide">
+        <div className="border-t border-[#FAF5EB]/20 pt-8 md:hidden flex flex-col justify-between items-center text-sm tracking-wide">
           <p className="mb-2 text-center md:mb-0">Copyright © {copyrightYear} Milan Hospitality and Management Services. All rights reserved.</p>
-          <Link 
-            href="https://www.megamind.studio/" 
-            target="_blank" 
-            className="mb-4 text-center transition-colors"
-          >
+          <Link href="https://www.megamind.studio/" target="_blank" className="mb-4 text-center transition-colors">
             Designed and Maintained by Megamind Studios
           </Link>
         </div>

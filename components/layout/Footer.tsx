@@ -336,7 +336,7 @@ export const Footer = () => {
 
               {/* Subsection: Karwar */}
               <div className="mb-10">
-                <h3 className="text-lg font-medium text-white mb-6">Hotel Èden, Karwar</h3>
+                <h3 className="text-lg font-medium text-white mb-6">Hotel Éden, Karwar</h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-[180px_180px_1fr] gap-y-4 gap-x-4 text-sm md:text-base">
                   {/* Row 1 */}
@@ -358,7 +358,7 @@ export const Footer = () => {
 
               {/* Subsection: Gokarna */}
               <div>
-                <h3 className="text-lg font-medium text-white mb-6">Hotel Èden Ember Castle, Gokarna</h3>
+                <h3 className="text-lg font-medium text-white mb-6">Ember Castle by Hotel Éden, Gokarna</h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-[180px_180px_1fr] gap-y-4 gap-x-4 text-sm md:text-base">
                   {/* Row 1 */}

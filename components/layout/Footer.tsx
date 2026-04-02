@@ -333,7 +333,7 @@ export const Footer = () => {
 
               {/* Subsection: Gokarna */}
               <div>
-                <h3 className="text-lg font-medium text-white mb-6">Ember Castle by Eden, Gokarna</h3>
+                <h3 className="text-lg font-medium text-white mb-6">Ember Castle by Éden, Gokarna</h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-[180px_180px_1fr] gap-y-4 gap-x-4 text-sm md:text-base">
                   {/* Row 1 */}
@@ -414,9 +414,9 @@ export const Footer = () => {
 
           {/* Section 1: Hotel Éden, Karwar */}
 
-          {/* Section 2: Ember Castle by Eden, Gokarna */}
+          {/* Section 2: Ember Castle by Éden, Gokarna */}
           <div className="flex flex-col gap-6 mb-8">
-            <h4 className=" text-lg">Ember Castle by Eden, Gokarna</h4>
+            <h4 className=" text-lg">Ember Castle by Éden, Gokarna</h4>
 
             {/* Gokarna Rooms */}
             <div className="flex flex-col gap-1 text-[15px] ">
@@ -498,8 +498,6 @@ export const Footer = () => {
         </div>
 
         {/* --- SECTION 2: DESTINATIONS ACCORDION --- */}
-
-  
 
         {/* --- SECTION 4: COPYRIGHT --- */}
         <div className="border-t border-[#FAF5EB]/20 pt-8 hidden md:flex flex-col-reverse md:flex-row justify-between items-center text-xs tracking-wide">

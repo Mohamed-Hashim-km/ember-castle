@@ -6,7 +6,7 @@ import { Dash, Plus02 } from "../utils/Icon";
 const faqData = [
   {
     id: 1,
-    question: "How far is Ember Castle by Eden from Gokarna Main Beach?",
+    question: "How far is Ember Castle by Éden from Gokarna Main Beach?",
     answer: "It’s approximately 2.6 km, making beach visits quick and easy.",
   },
   {

@@ -23,7 +23,7 @@ const WhatsappChatWidget = () => {
         position: "right",
       },
       brandSetting: {
-        brandName: "Ember Castle by Eden",
+        brandName: "Ember Castle by Éden",
         brandSubTitle: "",
         brandImg: "https://www.wati.io/wp-content/uploads/2023/04/Wati-logo.svg",
         welcomeText: "Hi there!\nHow can I help you?",

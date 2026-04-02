@@ -39,8 +39,8 @@ const canelaDeck = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL("https://ember-castle.hoteleden.in"),
   title: {
-    template: "%s | Ember Castle by Eden, Gokarna",
-    default: "Ember Castle by Eden, Gokarna",
+    template: "%s | Ember Castle by Éden, Gokarna",
+    default: "Ember Castle by Éden, Gokarna",
   },
   description:
     "Experience a designer boutique hotel stay at Hotel Éden's Ember Castle in Gokarna. Offering luxury stays, dining, wellness, and beautiful scenic spaces.",
@@ -62,16 +62,16 @@ export const metadata: Metadata = {
   creator: "Hotel Éden",
   publisher: "Hotel Éden",
   openGraph: {
-    title: "Ember Castle by Eden, Gokarna",
+    title: "Ember Castle by Éden, Gokarna",
     description: "Experience a designer boutique hotel stay at Hotel Éden's Ember Castle in Gokarna. Offering luxury stays, dining, and wellness.",
     url: "https://ember-castle.hoteleden.in",
-    siteName: "Ember Castle by Eden",
+    siteName: "Ember Castle by Éden",
     images: [
       {
         url: "https://ember-castle.vercel.app/images/og-image.png", // Using an existing image as default
         width: 1200,
         height: 630,
-        alt: "Ember Castle by Eden Exterior",
+        alt: "Ember Castle by Éden Exterior",
       },
     ],
     locale: "en_US",
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ember Castle by Eden, Gokarna",
+    title: "Ember Castle by Éden, Gokarna",
     description: "Experience a designer boutique hotel stay at Hotel Éden's Ember Castle in Gokarna.",
     images: ["https://ember-castle.vercel.app/images/og-image.png"],
   },

@@ -21,7 +21,7 @@ const FeatureSection = () => {
           {/* Beige Background Box 
              (This is absolutely positioned to the center, so it stays fixed in the middle) 
           */}
-          <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[90%] h-[550px] bg-[#001446] z-0" />
+          <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[90%] h-[550px] bg-[#243D22] z-0" />
 
           {/* Main Grid Content */}
           <div className="w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-0 items-center">
@@ -56,7 +56,7 @@ const FeatureSection = () => {
                 <button
                   onClick={handleButtonClick}
                   aria-label="Explore the Dining"
-                  className="hidden px-6 py-2 transition-all duration-300 font-medium bg-[#E2BA86] text-[#001446] disabled:bg-[#001446]/50   disabled:cursor-not-allowed cursor-pointer lg:block "
+                  className="hidden px-6 py-2 transition-all duration-300 font-medium bg-white text-[#243D22] disabled:bg-[#001446]/50   disabled:cursor-not-allowed cursor-pointer lg:block "
                 >
                   Book Now
                 </button>

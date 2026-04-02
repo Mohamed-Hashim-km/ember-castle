@@ -116,7 +116,7 @@ export const Navbar = () => {
       </div>
 
       {/* --- MOBILE NAVBAR --- */}
-      <div className="lg:hidden w-full flex justify-between items-center px-4 py-4 relative z-[60] bg-[#001446]">
+      <div className="lg:hidden w-full flex justify-between items-center px-4 py-5 relative z-[60] bg-[#001446]">
         <div className="flex items-center gap-4 z-10">
           {" "}
           <div className="relative flex gap-4 items-center group z-[999]">
@@ -130,7 +130,7 @@ export const Navbar = () => {
         </div>
 
         <Link href="/" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-          <Image src="/svgs/edenNav.svg" alt="Logo" width={80} height={80} />
+          <Image src="/svgs/edenNav.svg" alt="Logo" width={70} height={70} />
         </Link>
 
         <div className="flex items-center gap-4 z-10">

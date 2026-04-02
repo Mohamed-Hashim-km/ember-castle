@@ -97,7 +97,7 @@ const AboutLocation = () => {
         {/* Header Section */}
         <div className="flex justify-center text-center mb-8 md:mb-14">
           <div className="md:max-w-xl">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight text-primary">{STATIC_TITLE}</h2>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl  leading-tight text-primary">{STATIC_TITLE}</h2>
           </div>
         </div>
 

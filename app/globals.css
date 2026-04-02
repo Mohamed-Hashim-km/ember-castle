@@ -8,8 +8,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-jost); /* Use Jost as default sans */
-  --: var(--font-gilda); /* Use Gilda as serif */
+  --font-sans: var(--font-mona); /* Use Mona Sans as default sans */
+  --font-serif: var(--font-canela); /* Use Canela as serif */
   --color-primary: #1b1b1b;
   --color-secondary: #65676b;
 }
@@ -24,17 +24,17 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-jost), sans-serif; /* Default body font */
+  font-family: var(--font-mona), sans-serif; /* Default body font */
 }
 
-/* Apply Gilda Display to headings */
+/* Apply Canela Deck to headings */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-gilda), serif;
+  font-family: var(--font-canela), serif;
 }
 
 @theme {

@@ -23,12 +23,12 @@ const WhatsappChatWidget = () => {
         position: "right",
       },
       brandSetting: {
-        brandName: "Ember Castle by Hotel Éden",
-        brandSubTitle: "", 
+        brandName: "Ember Castle by Eden",
+        brandSubTitle: "",
         brandImg: "https://www.wati.io/wp-content/uploads/2023/04/Wati-logo.svg",
         welcomeText: "Hi there!\nHow can I help you?",
         // --- UPDATED TEXT BELOW ---
-        messageText: "Hi! I'm interested in booking a stay. Could you help me with the details?", 
+        messageText: "Hi! I'm interested in booking a stay. Could you help me with the details?",
         backgroundColor: "#00e785",
         ctaText: "Chat with us",
         borderRadius: "25",
@@ -36,7 +36,7 @@ const WhatsappChatWidget = () => {
         phoneNumber: "+918147508284",
       },
     }),
-    []
+    [],
   );
 
   useEffect(() => {

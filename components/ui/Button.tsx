@@ -14,7 +14,7 @@ export const Button: React.FC<ButtonProps> = ({ children, variant = "primary", c
     outline: "border border-[#FAF5EB] text-[#FAF5EB] hover:bg-[#FAF5EB] hover:text-[#001446]",
     secondary: "bg-[#E2BA86] text-white  hover:bg-[#E2BA86] hover:text-white",
     ghost: "text-[#FAF5EB] hover:text-white bg-transparent",
-    tertiary: "bg-[#001446] text-[#FEFEFE] disabled:bg-[#001446]/50 ",
+    tertiary: "bg-[#6B3520] text-[#FEFEFE] disabled:bg-[#6B3520]/50 ",
     outline2: "border border-[#001446] text-[#001446] hover:bg-[#001446] hover:text-[#FAF5EB]",
   };
 

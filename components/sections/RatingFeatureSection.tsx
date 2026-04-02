@@ -19,11 +19,11 @@ const RatingFeatureSection = () => {
               </h2>
               
               <p className="text-secondary text-base md:text-lg leading-relaxed font-light text-opacity-80 max-w-lg lg:pr-8">
-                Nestled within Gokarna's serene coastal landscape, Eden Ember Castle
+                Nestled within Gokarna's serene coastal landscape, Ember Castle by Eden
                 offers a distinguished retreat just 2.6km from the shoreline. 
                 Surrounded by landscaped greenery and the soft hum of the forest, 
                 the estate delivers privacy, proximity, and comfort in equal 
-                measure—a sanctuary designed for the intentional traveler
+                measure-a sanctuary designed for the intentional traveler.
               </p>
             </div>
 

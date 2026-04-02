@@ -91,7 +91,7 @@ export const SanctuariesSwiper = () => {
     { title: "Villa Room 2", price: "5,000", unit: "room", image: "/images/rooms/3.webp" },
     { title: "Villa Room 3", price: "7,500", unit: "room", image: "/images/rooms/4.webp" },
     { title: "Dormitory Rooms", price: "1,500", unit: "person", image: "/images/rooms/5.webp" },
-    { title: "Tent", price: "1000", unit: "person", image: "/images/rooms/6.webp" },
+    // { title: "Tent", price: "1000", unit: "person", image: "/images/rooms/6.webp" },
 
   ];
 

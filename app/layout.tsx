@@ -1,31 +1,46 @@
 import type { Metadata } from "next";
-import { Gilda_Display, Jost } from "next/font/google"; // Import the requested fonts
+import localFont from "next/font/local";
+import { Mona_Sans } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { BookNowModalProvider } from "@/context/BookNowModalContext";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 
-// Configure Gilda Display
-const gildaDisplay = Gilda_Display({
-  variable: "--font-gilda",
+const monaSans = Mona_Sans({
+  variable: "--font-mona",
   subsets: ["latin"],
-  weight: "400", // Gilda Display usually only comes in 400
+  // Mona Sans is a variable font on Google Fonts usually, but if weights are needed:
+  // weight is omitted for full variable support if possible, or specified if not supported natively as variable
 });
 
-// Configure Jost
-const jost = Jost({
-  variable: "--font-jost",
-  subsets: ["latin"],
-  // Jost is a variable font, so we might not strictly need to specify weights,
-  // but if we did, it handles ranges. Default is usually fine for variable fonts.
+// Configure CanelaDeck
+const canelaDeck = localFont({
+  variable: "--font-canela",
+  src: [
+    {
+      path: "../public/canelaDeck/CanelaDeck-Regular-Trial.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/canelaDeck/CanelaDeck-Medium-Trial.otf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/canelaDeck/CanelaDeck-Bold-Trial.otf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ember-castle.hoteleden.in"),
   title: {
-    template: "%s | Ember Castle by Hotel Éden, Gokarna",
-    default: "Ember Castle by Hotel Éden, Gokarna",
+    template: "%s | Ember Castle by Eden, Gokarna",
+    default: "Ember Castle by Eden, Gokarna",
   },
   description:
     "Experience a designer boutique hotel stay at Hotel Éden's Ember Castle in Gokarna. Offering luxury stays, dining, wellness, and beautiful scenic spaces.",
@@ -47,16 +62,16 @@ export const metadata: Metadata = {
   creator: "Hotel Éden",
   publisher: "Hotel Éden",
   openGraph: {
-    title: "Ember Castle by Hotel Éden, Gokarna",
+    title: "Ember Castle by Eden, Gokarna",
     description: "Experience a designer boutique hotel stay at Hotel Éden's Ember Castle in Gokarna. Offering luxury stays, dining, and wellness.",
     url: "https://ember-castle.hoteleden.in",
-    siteName: "Ember Castle by Hotel Éden",
+    siteName: "Ember Castle by Eden",
     images: [
       {
         url: "https://ember-castle.vercel.app/images/og-image.png", // Using an existing image as default
         width: 1200,
         height: 630,
-        alt: "Ember Castle by Hotel Éden Exterior",
+        alt: "Ember Castle by Eden Exterior",
       },
     ],
     locale: "en_US",
@@ -64,7 +79,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ember Castle by Hotel Éden, Gokarna",
+    title: "Ember Castle by Eden, Gokarna",
     description: "Experience a designer boutique hotel stay at Hotel Éden's Ember Castle in Gokarna.",
     images: ["https://ember-castle.vercel.app/images/og-image.png"],
   },
@@ -92,7 +107,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${gildaDisplay.variable} ${jost.variable} antialiased`}>
+      <body className={`${canelaDeck.variable} ${monaSans.variable} font-sans antialiased`}>
         <BookNowModalProvider>
           <Navbar />
           {children}

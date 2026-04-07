@@ -15,27 +15,27 @@ const dummyItems = [
   {
     image: "/images/indulgeInDistinctive/1.webp", // Replace with your actual image paths
     title: "Tulip",
-    description: "Global Culinary Narrative. Global plates served in a polished setting. From coastal harvests to international flavors, every meal is a moment worth savoring.",
+    description: "A refined selection of global flavours, thoughtfully prepared and served in an elegant, inviting setting.",
   },
   {
     image: "/images/indulgeInDistinctive/2.webp",
     title: "Golden Leaf Spa",
-    description: "A wellness sanctuary where skilled therapies and a calming ambience restore balance to the body and mind.",
+    description: "A private wellness haven offering skilled therapies and a serene atmosphere designed to restore balance and ease.",
   },
   {
     image: "/images/indulgeInDistinctive/3.webp",
     title: "Barbecue & Embers",
-    description: "As dusk falls, the estate glows. Experience open-air evenings featuring smoky grills, glowing bonfires, and the Gokarna sky.",
+    description: "An atmospheric outdoor setting where live grills, glowing embers, and unhurried evenings come together beautifully.",
   },
   {
     image: "/images/indulgeInDistinctive/4.webp",
     title: "The Poolside Lounge",
-    description: "A geometric social space designed for sun-drenched afternoons and refreshing swims.",
+    description: "A relaxed yet refined space to unwind, enjoy a refreshing dip, and soak in leisurely moments by the water.",
   },
   {
     image: "/images/indulgeInDistinctive/5.webp",
     title: "Movement & Leisure",
-    description: "A well-equipped fitness corner for morning rhythms and a sprawling lawn area for private celebrations under the stars.",
+    description: "From relaxed corners to shared experiences, every detail is shaped to offer a seamless balance of comfort, leisure, and memorable time.",
   },
 ];
 

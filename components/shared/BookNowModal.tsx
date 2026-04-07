@@ -186,9 +186,9 @@ const BookingModal = () => {
 
     if (!isValid) return;
 
-   
+    router.push("/thank-you");
     setIsSubmitting(true);
-   
+    closeModal();
 
     window.dispatchEvent(new Event("bookingFormSubmitted"));
 
@@ -236,8 +236,7 @@ const BookingModal = () => {
         },
         body: JSON.stringify(payload),
       });
- router.push("/thank-you");
-  closeModal();
+
       if (response.ok) {
         // Reset form
         setName("");

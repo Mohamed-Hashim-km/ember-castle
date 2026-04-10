@@ -243,7 +243,7 @@ export const Footer = () => {
 
                 {/* Social Icons */}
                 <div className="flex gap-4 mt-2">
-                  <Link href="https://www.instagram.com/hoteledenkarwar" target="_blank" className="w-8 h-8 flex items-center justify-center rounded">
+                  <Link href="https://www.instagram.com/embercastlebyeden?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D" target="_blank" className="w-8 h-8 flex items-center justify-center rounded">
                     <InstagramIcon />
                   </Link>
                   <Link
@@ -333,7 +333,7 @@ export const Footer = () => {
 
             <div className="flex gap-4">
               <Link
-                href="https://www.instagram.com/hoteledenkarwar"
+                href="https://www.instagram.com/embercastlebyeden?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D"
                 target="_blank"
                 className="w-8 h-8 flex items-center justify-center rounded bg-white/10 hover:bg-white/20"
               >

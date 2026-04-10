@@ -247,7 +247,7 @@ export const Footer = () => {
                     <InstagramIcon />
                   </Link>
                   <Link
-                    href="https://www.facebook.com/share/1Cz4zmnMed/?mibextid=wwXIfr"
+                    href="https://www.facebook.com/profile.php?id=61582904893900#"
                     target="_blank"
                     className="w-8 h-8 flex items-center justify-center rounded"
                   >
@@ -340,7 +340,7 @@ export const Footer = () => {
                 <InstagramIcon />
               </Link>
               <Link
-                href="https://www.facebook.com/share/1Cz4zmnMed/?mibextid=wwXIfr"
+                href="https://www.facebook.com/profile.php?id=61582904893900#"
                 target="_blank"
                 className="w-8 h-8 flex items-center justify-center rounded bg-white/10 hover:bg-white/20"
               >

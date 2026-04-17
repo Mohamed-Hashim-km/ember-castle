@@ -230,15 +230,15 @@ export const Footer = () => {
                 <div className="flex flex-col gap-4">
                   <div className="flex items-center gap-4">
                     <MailIcon />
-                    <a href="mailto:contact@edenhotel.com" className="hover:underline">
-                      contact@edenhotel.com
+                    <a href="mailto:embercastlegokarna@gmail.com" className="hover:underline">
+                      embercastlegokarna@gmail.com
                     </a>
                   </div>
-                  <div className="ml-9">
+                  {/* <div className="ml-9">
                     <a href="mailto:website.feedback@edenhotel.com" className="hover:underline">
                       website.feedback@edenhotel.com
                     </a>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Social Icons */}
@@ -317,19 +317,15 @@ export const Footer = () => {
             <h3 className="text-xl font-medium  mb-2">Get in Touch</h3>
 
             {/* -- NEW MAIL SECTION -- */}
-            <div className="flex flex-col gap-3">
+         
               <div className="flex items-center gap-4">
                 <MailIcon />
-                <a href="mailto:contact@edenhotel.com" className="hover:underline">
-                  contact@edenhotel.com
+                <a href="mailto:embercastlegokarna@gmail.com" className="hover:underline">
+                  embercastlegokarna@gmail.com
                 </a>
               </div>
-              <div className="ml-9">
-                <a href="mailto:website.feedback@edenhotel.com" className="hover:underline">
-                  website.feedback@edenhotel.com
-                </a>
-              </div>
-            </div>
+            
+     
 
             <div className="flex gap-4">
               <Link

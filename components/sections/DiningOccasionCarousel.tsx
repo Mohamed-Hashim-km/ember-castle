@@ -10,13 +10,13 @@ import 'swiper/css';
 
 // Mock data - replace with your actual images from Supabase/CMS
 const carouselImages = [
-  { id: 1, src: '/images/DiningCarousel/1.jpeg', alt: 'Dining interior' },
-  { id: 2, src: '/images/DiningCarousel/2.jpeg', alt: 'Outdoor terrace dining' },
-  { id: 3, src: '/images/DiningCarousel/3.jpeg', alt: 'Dining setup' },
-  { id: 4, src: '/images/DiningCarousel/4.jpeg', alt: 'Terrace view' },
-  { id: 5, src: '/images/DiningCarousel/5.jpeg', alt: 'Restaurant interior' },
-  { id: 6, src: '/images/DiningCarousel/6.jpeg', alt: 'Dining interior' },
-  { id: 7, src: '/images/DiningCarousel/7.jpeg', alt: 'Outdoor terrace dining' },
+  { id: 1, src: '/images/DiningCarousel/1.webp', alt: 'Dining interior' },
+  { id: 2, src: '/images/DiningCarousel/2.webp', alt: 'Outdoor terrace dining' },
+  { id: 3, src: '/images/DiningCarousel/3.webp', alt: 'Dining setup' },
+  { id: 4, src: '/images/DiningCarousel/4.webp', alt: 'Terrace view' },
+  { id: 5, src: '/images/DiningCarousel/6.webp', alt: 'Restaurant interior' },
+  { id: 6, src: '/images/DiningCarousel/7.webp', alt: 'Dining interior' },
+  { id: 7, src: '/images/DiningCarousel/5.webp', alt: 'Outdoor terrace dining' },
   { id: 8, src: '/images/DiningCarousel/8.webp', alt: 'Dining setup' },
   { id: 9, src: '/images/DiningCarousel/9.webp', alt: 'Dining setup' },
   { id: 10, src: '/images/DiningCarousel/10.webp', alt: 'Dining setup' },
@@ -73,7 +73,7 @@ export default function DiningOccasionCarousel() {
               {({ isActive }) => (
                 <div 
                   className={`relative w-full aspect-[4/5] md:aspect-[3/4] overflow-hidden bg-gray-100 transition-all duration-500 ease-in-out
-                    ${isActive ? 'opacity-100 scale-100' : 'opacity-70 scale-[0.98]'}`} // Optional: adds a slight focus effect to the center slide
+                    `}
                 >
                   <Image
                     src={image.src}

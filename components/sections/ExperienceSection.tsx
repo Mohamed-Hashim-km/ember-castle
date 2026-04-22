@@ -26,20 +26,20 @@ const ExperienceSection = () => {
           <div className="flex bg-white py-2 px-4 md:mt-5 rounded-[3px]  border border-[#C4C4C4] ">
             <button
               onClick={() => setActiveView("street")}
-              className={`px-6 py-2 transition-all duration-300 font-medium rounded-md ${
+              className={`px-6 py-2 transition-all duration-300 font-medium  disabled:cursor-not-allowed cursor-pointer ${
                 activeView === "street"
                   ? "bg-[#6B3520] text-[#FEFEFE]"
-                  : "text-[#1b1b1b] hover:bg-gray-50"
+                  : "text-primary hover:bg-gray-50"
               }`}
             >
               Google Street View
             </button>
             <button
               onClick={() => setActiveView("360")}
-              className={`px-6 py-2 transition-all duration-300 font-medium rounded-md ${
+              className={`px-6 py-2 transition-all duration-300 font-medium  disabled:cursor-not-allowed cursor-pointer ${
                 activeView === "360"
                   ? "bg-[#6B3520] text-[#FEFEFE]"
-                  : "text-[#1b1b1b] hover:bg-gray-50"
+                  : "text-primary hover:bg-gray-50"
               }`}
             >
               360 View

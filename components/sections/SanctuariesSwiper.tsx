@@ -39,16 +39,16 @@ export const CustomScrollbar = ({
           const rect = e.currentTarget.getBoundingClientRect();
           const clickX = e.clientX - rect.left;
           const clickPercent = clickX / rect.width;
-          
+
           const targetSlide = Math.floor(clickPercent * totalSlides);
           onSeek(Math.min(Math.max(targetSlide, 0), totalSlides - 1));
         }}
       >
         <motion.div
           className="absolute top-0 bottom-0 rounded-full"
-          style={{ 
+          style={{
             backgroundColor: thumbColor,
-            width: `${thumbWidthPercent}%` 
+            width: `${thumbWidthPercent}%`
           }}
           animate={{
             left: `${progress * (100 - thumbWidthPercent)}%`,
@@ -70,13 +70,13 @@ export const CustomScrollbar = ({
 
 const LeftArrow = () => (
   <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M9 17L1 9L9 0.999999" stroke="#001446" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M9 17L1 9L9 0.999999" stroke="#001446" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
 
 const RightArrow = () => (
   <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M1 1L9 9L0.999999 17" stroke="#001446" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M1 1L9 9L0.999999 17" stroke="#001446" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
 
@@ -107,7 +107,7 @@ export const SanctuariesSwiper = () => {
         <h2 className="text-4xl md:text-5xl lg:text-6xl text-center mb-8 md:mb-14 text-primary leading-tight">
           The Sanctuaries
         </h2>
-      
+
 
         <div className="w-full">
           <Swiper
@@ -146,7 +146,7 @@ export const SanctuariesSwiper = () => {
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                   </div>
-                  
+
                   <div className="flex flex-col grow">
                     <div className="flex justify-between items-start mb-6">
                       <h3 className="text-primary font-medium text-lg md:text-xl md:mb-6 leading-[1.4] transition-colors duration-300 whitespace-pre-line mr-4">
@@ -163,7 +163,7 @@ export const SanctuariesSwiper = () => {
                         </div>
                       </div>
                     </div>
-                    
+
                     <div className="mt-auto items-start flex">
                       <Button
                         variant="tertiary"
@@ -186,18 +186,18 @@ export const SanctuariesSwiper = () => {
 
           {/* Mobile-only scrollbar */}
           <div className="md:hidden">
-            <CustomScrollbar 
-              progress={scrollbarProgress} 
+            <CustomScrollbar
+              progress={scrollbarProgress}
               totalSlides={rooms.length} // Force the scrollbar to only see the unique slides
               onSeek={(targetIndex) => {
                 swiperRef.current?.slideToLoop(targetIndex);
-              }} 
+              }}
             />
           </div>
         </div>
 
         {/* Custom Navigation Buttons (Desktop) */}
-        <button 
+        <button
           className="hidden md:flex absolute top-[60%] lg:top-[50%] left-0 md:left-4 z-20 -translate-x-1/2 -translate-y-1/2 w-12 h-12 items-center justify-center cursor-pointer transition-opacity duration-300 hover:opacity-70"
           onClick={() => swiperRef.current?.slidePrev()}
           aria-label="Previous slide"
@@ -205,7 +205,7 @@ export const SanctuariesSwiper = () => {
           <LeftArrow />
         </button>
 
-        <button 
+        <button
           className="hidden md:flex absolute top-[60%] lg:top-[50%] right-0 md:right-4 z-20 translate-x-1/2 -translate-y-1/2 w-12 h-12 items-center justify-center cursor-pointer transition-opacity duration-300 hover:opacity-70"
           onClick={() => swiperRef.current?.slideNext()}
           aria-label="Next slide"

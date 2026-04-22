@@ -8,6 +8,7 @@ import RatingFeatureSection from "@/components/sections/RatingFeatureSection";
 import { SanctuariesSwiper } from "@/components/sections/SanctuariesSwiper";
 import { MapSection } from "@/components/sections/MapSection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
+import DiningOccasionCarousel from "@/components/sections/DiningOccasionCarousel";
 
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
 
       <ContentCarousel />
       <ExperienceSection />
+      <DiningOccasionCarousel/>
       <FeatureSection />
       
 

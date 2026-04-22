@@ -23,7 +23,7 @@ const ExperienceSection = () => {
           </div>
 
           {/* Toggle Buttons */}
-          <div className="flex bg-white py-2 px-4 md:mt-5 rounded-md border border-[#C4C4C4] ">
+          <div className="flex bg-white py-2 px-4 md:mt-5 rounded-[3px]  border border-[#C4C4C4] ">
             <button
               onClick={() => setActiveView("street")}
               className={`px-6 py-2 transition-all duration-300 font-medium rounded-md ${

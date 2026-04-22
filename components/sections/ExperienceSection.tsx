@@ -9,12 +9,12 @@ const ExperienceSection = () => {
   const threeSixtyUrl = "https://tours.360tourshoots.in/tours/WlY3s_kai";
 
   return (
-    <section className="pt-10 pb-4 md:pt-24 md:pb-4 bg-white">
+    <section className="pt-10 pb-4 md:pt-24 md:pb-24 bg-white">
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-start mb-8 md:mb-16 gap-6">
           <div className="max-w-2xl">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight text-primary mb-10">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight text-primary mb-5 md:mb-10">
               Step Into the Experience
             </h2>
             <p className="text-secondary text-[16px] md:text-[18px] leading-relaxed">

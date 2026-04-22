@@ -57,9 +57,8 @@ const Faq = () => {
               {faqData.map((item) => (
                 <div
                   key={item.id}
-                  className={`border border-gray-200 rounded-xl overflow-hidden transition-all duration-300 ${
-                    activeId === item.id ? " " : "bg-white"
-                  }`}
+                  className={`border border-gray-200 rounded-xl overflow-hidden transition-all duration-300 ${activeId === item.id ? " " : "bg-white"
+                    }`}
                 >
                   {/* Header */}
                   <div className="p-5 flex justify-between items-center cursor-pointer select-none" onClick={() => toggleAccordion(item.id)}>
@@ -77,9 +76,8 @@ const Faq = () => {
 
                   {/* Body */}
                   <div
-                    className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                      activeId === item.id ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-                    }`}
+                    className={`transition-all duration-300 ease-in-out overflow-hidden ${activeId === item.id ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                      }`}
                   >
                     <div className="px-5 pb-5 pt-0">
                       <p className="text-secondary text-base leading-relaxed mb-0">{item.answer}</p>

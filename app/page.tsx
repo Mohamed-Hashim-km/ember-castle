@@ -6,6 +6,9 @@ import { Hero } from "@/components/sections/Hero";
 import { ImageCtaSection } from "@/components/sections/ImageCtaSection";
 import RatingFeatureSection from "@/components/sections/RatingFeatureSection";
 import { SanctuariesSwiper } from "@/components/sections/SanctuariesSwiper";
+import { MapSection } from "@/components/sections/MapSection";
+import ExperienceSection from "@/components/sections/ExperienceSection";
+
 
 export default function Home() {
   return (
@@ -22,9 +25,12 @@ export default function Home() {
       <RatingFeatureSection />
 
       <ContentCarousel />
+      <ExperienceSection />
       <FeatureSection />
+      
 
       <Faq />
+      <MapSection />
       <ImageCtaSection
         backgroundImage="/images/footer.webp"
         title="Rooftop Dining Within a Nature-Inspired Ambience of Refined Elegance"

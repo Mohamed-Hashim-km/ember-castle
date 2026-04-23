@@ -66,7 +66,7 @@ export default function DiningOccasionCarousel() {
               spaceBetween: 32,
             }
           }}
-          className="w-full !pb-3 md:!pb-12"
+          className="w-full !pb-3 md:!pb-8"
         >
           {carouselImages.map((image) => (
             <SwiperSlide key={image.id} className="transition-transform duration-300">

@@ -37,51 +37,60 @@ const canelaDeck = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ember-castle.hoteleden.in"),
+  metadataBase: new URL("https://embercastle.hoteleden.in"),
   title: {
     template: "%s | Ember Castle by Éden, Gokarna",
-    default: "Ember Castle by Éden, Gokarna",
+    default: "Ember Castle by Éden | Luxury Boutique Hotel in Gokarna",
   },
   description:
-    "Experience a designer boutique hotel stay at Hotel Éden's Ember Castle in Gokarna. Offering luxury stays, dining, wellness, and beautiful scenic spaces.",
+    "Discover Ember Castle by Éden — a luxury designer boutique hotel in Gokarna, Karnataka. Indulge in premium sanctuaries, rooftop dining, wellness experiences, and stunning scenic spaces. Book your stay today.",
   keywords: [
-    "Hotel Éden",
     "Ember Castle Gokarna",
+    "Hotel Éden Gokarna",
     "Hotel Eden Ember Castle",
-    "Gokarna Hotels",
-    "Luxury Stay Gokarna",
+    "Luxury Hotel Gokarna",
     "Boutique Hotel Gokarna",
-    "Ember Castle",
     "Best Hotel in Gokarna",
-    "Spa in Gokarna",
+    "Gokarna Beach Resort",
+    "Rooftop Dining Gokarna",
+    "Spa and Wellness Gokarna",
+    "Romantic Hotel Gokarna",
+    "Weekend Getaway Gokarna",
     "Fine Dining Gokarna",
     "Event Space Gokarna",
     "Karwar Hotels",
+    "Karnataka Luxury Hotels",
+    "embercastle.hoteleden.in",
   ],
-  authors: [{ name: "Hotel Éden" }],
+  authors: [{ name: "Hotel Éden", url: "https://embercastle.hoteleden.in" }],
   creator: "Hotel Éden",
   publisher: "Hotel Éden",
+  alternates: {
+    canonical: "https://embercastle.hoteleden.in",
+  },
   openGraph: {
-    title: "Ember Castle by Éden, Gokarna",
-    description: "Experience a designer boutique hotel stay at Hotel Éden's Ember Castle in Gokarna. Offering luxury stays, dining, and wellness.",
-    url: "https://ember-castle.hoteleden.in",
+    title: "Ember Castle by Éden | Luxury Boutique Hotel in Gokarna",
+    description:
+      "Experience the epitome of fine living at Ember Castle by Éden in Gokarna. Premium sanctuaries, rooftop dining, wellness, and breathtaking scenic spaces await you.",
+    url: "https://embercastle.hoteleden.in",
     siteName: "Ember Castle by Éden",
     images: [
       {
-        url: "https://ember-castle.vercel.app/images/og-image.png", // Using an existing image as default
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Ember Castle by Éden Exterior",
+        alt: "Ember Castle by Éden — Luxury Boutique Hotel, Gokarna",
       },
     ],
-    locale: "en_US",
+    locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ember Castle by Éden, Gokarna",
-    description: "Experience a designer boutique hotel stay at Hotel Éden's Ember Castle in Gokarna.",
-    images: ["https://ember-castle.vercel.app/images/og-image.png"],
+    title: "Ember Castle by Éden | Luxury Boutique Hotel in Gokarna",
+    description:
+      "Discover Ember Castle by Éden — luxury stays, rooftop dining, and wellness experiences in the heart of Gokarna, Karnataka.",
+    images: ["/images/og-image.png"],
   },
   robots: {
     index: true,
@@ -94,6 +103,10 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  verification: {
+    google: "", // Add your Google Search Console verification token here
+  },
+  category: "travel",
 };
 
 import { Footer } from "@/components/layout/Footer";

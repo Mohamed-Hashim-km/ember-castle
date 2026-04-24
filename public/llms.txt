@@ -1,20 +1,67 @@
-# Hotel Éden - Ember Castle, Gokarna
+# Ember Castle by Éden — Luxury Boutique Hotel, Gokarna
 
-> The Epitome of Fine Living. A designer boutique hotel offering luxury stays, dining, wellness, and scenic event spaces in Gokarna.
+> The Epitome of Fine Living. A premier designer boutique hotel offering luxury stays, rooftop dining, wellness, and breathtaking scenic experiences in Gokarna, Karnataka, India.
 
-Hotel Éden's Ember Castle is a premier luxury destination located in beautiful Gokarna, offering an exceptional experience of elegance and comfort. Our nature-inspired ambience features refined spaces, luxury sanctuaries, and exquisite rooftop dining, making it the perfect getaway.
+## About Ember Castle
 
-## Core Features and Sections
-- **Hero & Landing**: Breathtaking introduction to Ember Castle setting the tone for fine living in Gokarna.
-- **Sanctuaries (Rooms & Suites)**: Explore our premium stay options carefully curated for peace and luxury.
-- **Dining**: Rooftop dining within a nature-inspired ambience, combining sophisticated culinary experiences with scenic views.
-- **Location**: Situated in the heart of Gokarna's tranquil landscape, easily accessible with major routes.
-- **Booking**: Hassle-free online booking functionality to plan your visit.
+Ember Castle by Éden is a luxury boutique hotel situated in the serene coastal town of Gokarna, Karnataka. Designed for discerning travellers who seek elegance without compromise, Ember Castle blends nature-inspired architecture with refined modern aesthetics. Every detail — from the curated interiors to the bespoke hospitality — is crafted to deliver an unforgettable stay.
+
+The property is operated under the Hotel Éden brand, known for its commitment to thoughtful refinement, elevated comfort, and immersive experiences rooted in the beauty of the local landscape.
+
+## Canonical Website
+
+- **URL**: https://embercastle.hoteleden.in
+- **Brand**: Ember Castle by Éden
+- **Parent Brand**: Hotel Éden
+
+## Location
+
+- **City**: Gokarna
+- **State**: Karnataka
+- **Country**: India
+- **Region**: Coastal Karnataka (near Karwar)
+
+## Core Offerings & Sections
+
+- **Hero / Landing**: A cinematic introduction to Ember Castle — setting the mood for the fine living experience with immersive visuals and brand identity.
+- **Sanctuaries (Rooms & Suites)**: Meticulously designed premium rooms and suites offering peace, luxury, and nature-framed views. Each sanctuary is crafted for comfort and elegance.
+- **Dining**: Signature rooftop dining within a nature-inspired ambience. Guests enjoy sophisticated culinary experiences paired with panoramic views of Gokarna's landscape.
+- **Experiences**: Curated wellness, relaxation, and local exploration activities for guests seeking more than just accommodation.
+- **Features & Amenities**: World-class amenities including spa & wellness facilities, event spaces, concierge services, and premium in-room features.
+- **Location & Map**: Strategically located for easy access from Gokarna town and major transport routes. Includes an interactive map for navigation.
+- **FAQ**: Answers to common guest questions covering check-in/check-out, booking policies, dining, and local attractions.
+- **Booking**: Seamless, hassle-free online booking to secure a stay at Ember Castle.
 
 ## Pages Index
-- [Home (Landing Page)](https://ember-castle.hoteleden.in/)
-- [Privacy Policy](https://ember-castle.hoteleden.in/privacy-policy)
-- [Terms and Conditions](https://ember-castle.hoteleden.in/terms-and-conditions)
 
-## Contact Information
-For inquiries, guests can find booking options scattered throughout the website to effortlessly secure their luxury stay at Ember Castle, Gokarna.
+- [Home (Landing Page)](https://embercastle.hoteleden.in/)
+- [Privacy Policy](https://embercastle.hoteleden.in/privacy-policy)
+- [Terms and Conditions](https://embercastle.hoteleden.in/terms-and-conditions)
+- [Thank You](https://embercastle.hoteleden.in/thank-you)
+
+## Key Highlights
+
+- Designer boutique hotel with nature-inspired architecture
+- Rooftop dining with panoramic views
+- Luxury sanctuaries (rooms & suites) with premium amenities
+- Spa, wellness, and curated local experiences
+- Elegant event and banquet spaces
+- Located in the tranquil coastal town of Gokarna, Karnataka
+
+## Contact & Booking
+
+Guests can book their stay directly via the official website: https://embercastle.hoteleden.in
+Booking inquiry widgets are available throughout the site for easy reservation.
+
+## Brand Identity
+
+- **Tagline**: "The Epitome of Fine Living"
+- **Design Philosophy**: Nature-inspired elegance, refined comfort, bespoke luxury
+- **Target Audience**: Discerning travellers, couples, wellness seekers, corporate retreats
+
+## Technical Notes
+
+- Built with Next.js (React framework)
+- Hosted at: https://embercastle.hoteleden.in
+- Sitemap: https://embercastle.hoteleden.in/sitemap.xml
+- Robots: https://embercastle.hoteleden.in/robots.txt

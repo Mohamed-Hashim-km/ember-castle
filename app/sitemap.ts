@@ -1,24 +1,33 @@
 import { MetadataRoute } from 'next'
- 
+
+const BASE_URL = 'https://embercastle.hoteleden.in'
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://ember-castle.hoteleden.in',
+      url: BASE_URL,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: 'weekly',
       priority: 1,
     },
     {
-      url: 'https://ember-castle.hoteleden.in/privacy-policy',
+      url: `${BASE_URL}/privacy-policy`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
-      priority: 0.8,
+      priority: 0.5,
     },
     {
-      url: 'https://ember-castle.hoteleden.in/terms-and-conditions',
+      url: `${BASE_URL}/terms-and-conditions`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
-      priority: 0.8,
+      priority: 0.5,
+    },
+    {
+      url: `${BASE_URL}/thank-you`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.3,
     },
   ]
 }
+
